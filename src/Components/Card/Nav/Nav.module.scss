@@ -1,0 +1,66 @@
+@import '../../../root.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    font-family: 'Press Start 2P', cursive;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.cardStyle {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 50vw;
+    background-color: white;
+    top: 10vh;
+    bottom: 10vh;
+
+    min-height: 30vh;
+
+    padding: 3vh 1vw 2vh 1.2vw;
+
+    flex-basis: fit-content;
+}
+
+.iconContainerRow {
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: row;
+}
+
+// Accesses the font-awesome pseudo-selector
+.iconStyle:before {
+    cursor: pointer;
+}
+
+.iconStyle {
+    position: relative;
+    display: flex;
+    margin-right: 3vw;
+    font-size: 3vw;
+    height: 7vw;
+    width: 5vw;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, .4);
+    outline: none;
+
+    z-index: 1;
+    
+    &:hover {
+        color: lime;
+        transition: color 0.5s;
+    }
+}
+
+.iconStyleActive {
+    color: lime;
+    transition: color 0.5s;
+    animation: glow 1s ease-in-out infinite alternate;
+}

@@ -1,0 +1,12 @@
+@import './SCSS/_animations.scss';
+@import './SCSS/_variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Press Start 2P', cursive;
+  background-color: rgb(21, 21, 21);
+  overflow-x: hidden;
+}

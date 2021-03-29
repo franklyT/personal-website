@@ -1,0 +1,35 @@
+@import '../root.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25vw;
+    margin-top: 10vh;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.mobileGithubIcon {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
+        text-align: center;
+        font-size: 7em;
+        border: none;
+        margin: auto;
+        height: 1.5em;
+        width: 1.5em;
+        background: rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, .4);
+        outline: none;
+    
+        z-index: 1;
+
+        color: lime;
+        transition: color 2s;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+}

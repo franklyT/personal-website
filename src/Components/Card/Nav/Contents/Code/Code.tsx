@@ -1,0 +1,62 @@
+import React, {useState} from 'react';
+import styles from "./Code.module.scss";
+import TheresMore from "../../../../../Assets/Images/Card/githubSplash.jpg";
+
+function Code(props: any) {
+    const [hoveredProject, setHoveredProject] = useState('');
+
+    const githubSplash = (
+        <div>
+            <br/>
+            -&gt; <a href="https://github.com" className={styles.linkGithub}> https://github.com </a> <br/>
+            <br/>
+            Technologies:
+
+            <br/>
+            &nbsp;\ Languages: CSS, HTML, JavaScript, Python, Ruby, TypeScript <br/>
+            &nbsp;\ Frameworks: e.g. jQuery, React, Ruby on Rails, Svelte, Vue <br/>
+            &nbsp;\ Platforms/APIs: e.g. Firebase, Heroku, Docker, Google Platforms, Netlify <br/>
+            &nbsp;\ Build: e.g. Babel, Gulp, Webpack <br/>
+        </div>
+    );
+
+    return (
+        <div
+            className={
+                props.renderCard
+                    ? `${styles.masterDiv} ${styles.masterDivVisible}`
+                    : styles.masterDiv
+            }
+        >
+            <div className={styles.codeGrid}>
+                <div className={styles.title}> Work</div>
+
+                <img
+                    src={TheresMore}
+                    onMouseEnter={() => setHoveredProject("githubSplash")}
+                    className={
+                        hoveredProject === "githubSplash"
+                            ? styles.codeGridImage
+                            : `${styles.codeGridImage} ${styles.codeGridImageInactive}`
+                    }
+                    alt="Github Links"
+                    onClick={() => window.open("https://github.com/franklyT")}
+                />
+
+                <div
+                    className={
+                        hoveredProject === "githubSplash"
+                            ? styles.projectDetailsBox
+                            : `${styles.projectDetailsBox} ${styles.projectDetailsBoxInactive}`
+                    }
+                >
+                    <div className={styles.projectDetailsText}>
+                        {githubSplash}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Code;
