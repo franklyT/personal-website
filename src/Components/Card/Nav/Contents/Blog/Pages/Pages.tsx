@@ -2,12 +2,11 @@ import React from 'react';
 
 import * as PageIndex from "./Pages.index";
 import {Entry} from "./Entries/Interface/Entry";
-import {MONTHS_LONG} from "../../../../../../static/Constants";
 
 function Pages() {
     const sanitizeDate = (date: string) => Number(date.replaceAll("/", ''));
 
-    const getLongMonthDay = (date: string) => `${MONTHS_LONG[Number(date.substring(0, 2)) - 1]} ${Number(date.substring(3, 5))}`;
+    const getLongMonthDay = (date: string) => `${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(date.substring(0, 2)) - 1]} ${Number(date.substring(3, 5))}`;
 
     const collatePages: Entry[] = Object.values(PageIndex).sort((a, b) => sanitizeDate(a.date) > sanitizeDate(b.date) ? 1 : -1);
 
