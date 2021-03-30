@@ -3,12 +3,12 @@ import styles from './At.module.scss';
 
 function At (props:any) {
   const [submitted, setSubmitted] = useState(false);
-  const [verify, setVerify] = useState(0);
+  const [verifyInput, setVerify] = useState(0);
   const [verifyNum1] = useState(Math.floor(Math.random() * 9) + 1);
   const [verifyNum2] = useState(Math.floor(Math.random() * 9) + 1);
   const [verified, setVerified] = useState(false);
 
-  useEffect( () => setVerified(verify === verifyNum1 + verifyNum2), [verify, verifyNum1, verifyNum2] );
+  useEffect( () => setVerified(verifyInput === verifyNum1 + verifyNum2), [verifyInput, verifyNum1, verifyNum2] );
 
   // TODO: Improve verify check css
 
@@ -27,14 +27,14 @@ function At (props:any) {
           name="hidden_iframe"
           id="hidden_iframe"
           style={{ display: 'none' }}
-          onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; }}
+          onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; } }
         />
 
         <form
           action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
           method="post"
           target="hidden_iframe"
-          onSubmit={() => { if (verify === (verifyNum1 + verifyNum2)) setSubmitted(true); }}
+          onSubmit={ () => { if (verifyInput === (verifyNum1 + verifyNum2)) setSubmitted(true); } }
         >
 
           <input
