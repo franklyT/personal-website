@@ -3,7 +3,7 @@ import styles from './At.module.scss';
 
 function At (props:any) {
   const [submitted, setSubmitted] = useState(false);
-  const [verifyInput, setVerify] = useState(0);
+  const [verifyInput, setVerifyInput] = useState(0);
   const [verifyNum1] = useState(Math.floor(Math.random() * 9) + 1);
   const [verifyNum2] = useState(Math.floor(Math.random() * 9) + 1);
   const [verified, setVerified] = useState(false);
@@ -82,7 +82,7 @@ function At (props:any) {
             type="text"
             placeholder="Verify"
             className={`${styles.input} ${styles.inputBox} ${styles.inputBoxVerify}`}
-            onChange={ evt => setVerify(Number(evt.target.value)) }
+            onChange={ evt => setVerifyInput(Number(evt.target.value)) }
             required
           />
 
