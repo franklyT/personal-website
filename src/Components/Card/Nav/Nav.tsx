@@ -48,7 +48,7 @@ function Nav() {
                 />
             </div>
 
-            <Carets propObj={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />
+            <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />
 
             <div className={styles.cardStyle} >
                 <Portfolio renderCard={activeCard === portfolioRef} />

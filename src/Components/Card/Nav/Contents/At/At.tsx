@@ -8,7 +8,7 @@ function At (props:any) {
   const [verifyInt2] = useState(Math.floor(Math.random() * 9) + 1);
   const [verified, setVerified] = useState(false);
 
-  useEffect(() => setVerified(verify === verifyInt1 + verifyInt2), [verify]);
+  useEffect(() => setVerified(verify === verifyInt1 + verifyInt2), [verify, verifyInt1, verifyInt2]);
 
   // TODO: Improve verify check css
 

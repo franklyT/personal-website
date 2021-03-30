@@ -6,22 +6,22 @@ function Carets(props: any) {
       <div className={styles.containerRow}>
         <i
             className={`${styles.cardCaretStyle} ${styles.portfolioCaretStyle}`}
-            style={ props.propObj.activeCard === props.propObj.portfolioRef ? { height: "0px" } : { height: "100px" }}
+            style={ props.parentState.activeCard === props.parentState.portfolioRef ? { height: "0px" } : { height: "100px" }}
         />
 
         <i
             className={`${styles.cardCaretStyle} ${styles.blogCaretStyle}`}
-            style={ props.propObj.activeCard === props.propObj.blogRef ? { height: "0px" } : { height: "100px" }}
+            style={ props.parentState.activeCard === props.parentState.blogRef ? { height: "0px" } : { height: "100px" }}
         />
 
         <i
             className={`${styles.cardCaretStyle} ${styles.codeCaretStyle}`}
-            style={ props.propObj.activeCard === props.propObj.codeRef ? { height: "0px" } : { height: "100px" }}
+            style={ props.parentState.activeCard === props.parentState.codeRef ? { height: "0px" } : { height: "100px" }}
         />
 
         <i
             className={`${styles.cardCaretStyle} ${styles.atCaretStyle}`}
-            style={ props.propObj.activeCard === props.propObj.atRef ? { height: "0px" } : { height: "100px" }}
+            style={ props.parentState.activeCard === props.parentState.atRef ? { height: "0px" } : { height: "100px" }}
         />
       </div>
     );
