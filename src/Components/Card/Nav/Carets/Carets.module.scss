@@ -7,7 +7,6 @@
 .caretStyle {
     position: absolute;
     display: block;
-    top: 21vh;
     width: 0;
     height: 0;
 
@@ -16,24 +15,41 @@
     border-color: transparent transparent #ffffff transparent;
 
     z-index: -1;
+
+    @media (min-width: 576px) {
+        top: 17.5vh;
+    }
+
+    @media (min-width: 768px) {
+        top: 13.8vh;
+    }
+
+    @media (min-width: 1200px) {
+        top: 20vh;
+    }
+
+    @media (min-width: 2000px) {
+        top: 20vh;
+    }
+
 }
 
 .caretStylePortfolio {
-    margin-left: -0.2vw;
+    margin-left: -2.1vw;
     transition: height 0.5s;
 }
 
 .caretStyleBlog {
-    margin-left: 7.9vw;
+    margin-left: 5.55vw;
     transition: height 0.5s;
 }
 
 .caretStyleCode {
-    margin-left: 15.6vw;
+    margin-left: 13.9vw;
     transition: height 0.5s;
 }
 
 .caretStyleAt {
-    margin-left: 23.4vw;
+    margin-left: 21.7vw;
     transition: height 0.5s;
 }

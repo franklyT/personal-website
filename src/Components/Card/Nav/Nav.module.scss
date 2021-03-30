@@ -1,17 +1,5 @@
 @import '../../../root.scss';
 
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 25vw;
-    margin-top: 10vh;
-    font-family: 'Press Start 2P', cursive;
-
-    @media (max-width: 600px) {
-        display: none;
-    }
-}
-
 .cardStyle {
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +17,9 @@
 }
 
 .iconContainerRow {
-    margin-left: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7vw;
     display: flex;
     flex-direction: row;
 }
