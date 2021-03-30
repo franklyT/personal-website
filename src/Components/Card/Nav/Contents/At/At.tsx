@@ -13,13 +13,7 @@ function At (props:any) {
   // TODO: Improve verify check css
 
     return (
-      <div
-        className={
-          props.renderCard
-            ? `${styles.masterDiv} ${styles.masterDivVisible}`
-            : styles.masterDiv
-        }
-      >
+      <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
         <h1 className={styles.cardTitle}> Let's chat </h1>
         <h2 className={styles.cardSubtitle}>
           I'm always open to new ideas and opportunities (or any type of
@@ -32,18 +26,13 @@ function At (props:any) {
           name="hidden_iframe"
           id="hidden_iframe"
           style={{ display: 'none' }}
-          onLoad={() => {
-            if (submitted)
-              (window as any).location = 'https://github.com/franklyT/portfolio-thanks';
-          }}
+          onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; }}
         />
         <form
           action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
           method="post"
           target="hidden_iframe"
-          onSubmit={() => {
-            if (verify === (verifyInt1 + verifyInt2)) setSubmitted(true);
-          }}
+          onSubmit={() => { if (verify === (verifyInt1 + verifyInt2)) setSubmitted(true); }}
         >
 
           <input

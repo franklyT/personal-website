@@ -19,41 +19,25 @@ function Nav() {
         <React.Fragment>
             <div className={styles.iconContainerRow}>
                 <button
-                    className={
-                        activeCard === portfolioRef
-                            ? `fa fa-user-circle ${styles.iconStyle} ${styles.iconStyleActive}`
-                            : `fa fa-user-circle ${styles.iconStyle}`
-                    }
+                    className={ `fa fa-user-circle ${activeCard === portfolioRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
                     ref={portfolioRef}
                     onClick={() => setActiveCard(portfolioRef)}
                 />
 
                 <button
-                    className={
-                        activeCard === blogRef
-                            ? `fa fa-pencil-square-o ${styles.iconStyle} ${styles.iconStyleActive}`
-                            : `fa fa-pencil-square-o ${styles.iconStyle}`
-                    }
+                    className={ `fa fa-pencil-square-o ${activeCard === blogRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
                     ref={blogRef}
                     onClick={() => setActiveCard(blogRef)}
                 />
 
                 <button
-                    className={
-                        activeCard === codeRef
-                            ? `fa fa-code ${styles.iconStyle} ${styles.iconStyleActive}`
-                            : `fa fa-code ${styles.iconStyle}`
-                    }
+                    className={ `fa fa-code ${activeCard === codeRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
                     ref={codeRef}
                     onClick={() => setActiveCard(codeRef)}
                 />
 
                 <button
-                    className={
-                        activeCard === atRef
-                            ? `fa fa-at ${styles.iconStyle} ${styles.iconStyleActive}`
-                            : `fa fa-at ${styles.iconStyle}`
-                    }
+                    className={ `fa fa-at ${activeCard === atRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
                     ref={atRef}
                     onClick={() => setActiveCard(atRef)}
                 />

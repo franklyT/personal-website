@@ -13,30 +13,24 @@ function Portfolio(props: any) {
       </div>;
 
     return (
-      <div
-        className={
-          props.renderCard
-            ? `${styles.masterDiv} ${styles.masterDivVisible}`
-            : styles.masterDiv
-        }
-      >
-        <div className={styles.meContainer}>
-          <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret} /></h1>
-          <h2 className={styles.meTitleStyle}>
-            Web Developer
-          </h2>
-        </div>
+        <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
+            <div className={styles.meContainer}>
+              <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret} /></h1>
+              <h2 className={styles.meTitleStyle}>
+                Web Developer
+              </h2>
+            </div>
 
-        <div 
-          onMouseEnter={() => setHoveredCheck(true)}
-          onMouseLeave={() => setHoveredCheck(false)}
-          className={styles.portraitContainer}
-        >
-          {PortfolioRPGText}
-        <div
-          className={ hoveredCheck ? `${styles.portrait} ${styles.portraitHover}` : styles.portrait }
-        />
-        </div>
+            <div
+              onMouseEnter={() => setHoveredCheck(true)}
+              onMouseLeave={() => setHoveredCheck(false)}
+              className={styles.portraitContainer}
+            >
+              {PortfolioRPGText}
+            <div
+              className={ hoveredCheck ? `${styles.portrait} ${styles.portraitHover}` : styles.portrait }
+            />
+            </div>
       </div>
     );
 }

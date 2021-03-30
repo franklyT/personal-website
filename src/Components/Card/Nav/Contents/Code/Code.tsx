@@ -21,13 +21,7 @@ function Code(props: any) {
     );
 
     return (
-        <div
-            className={
-                props.renderCard
-                    ? `${styles.masterDiv} ${styles.masterDivVisible}`
-                    : styles.masterDiv
-            }
-        >
+        <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
             <div className={styles.codeGrid}>
                 <div className={styles.title}> Work</div>
 
