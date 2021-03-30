@@ -13,7 +13,7 @@
     pointer-events: auto;
 }
 
-.codeGrid {
+.grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
     
 }
 
-.codeGridImage {
+.gridImage {
     display: flex;
   
     height: 45vh;
@@ -34,7 +34,7 @@
     transition: 1s;
 }
 
-.codeGridImageInactive {
+.gridImageInactive {
     filter: grayscale(50);
     transition: 1s;
 }

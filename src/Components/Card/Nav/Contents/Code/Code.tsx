@@ -22,7 +22,7 @@ function Code(props: any) {
 
     return (
         <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
-            <div className={styles.codeGrid}>
+            <div className={styles.grid}>
                 <div className={styles.title}> Work</div>
 
                 <img
@@ -30,8 +30,8 @@ function Code(props: any) {
                     onMouseEnter={() => setHoveredProject("githubSplash")}
                     className={
                         hoveredProject === "githubSplash"
-                            ? styles.codeGridImage
-                            : `${styles.codeGridImage} ${styles.codeGridImageInactive}`
+                            ? styles.gridImage
+                            : `${styles.gridImage} ${styles.gridImageInactive}`
                     }
                     alt="Github Links"
                     onClick={() => window.open("https://github.com/franklyT")}
