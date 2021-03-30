@@ -23,12 +23,17 @@
     transition: height 0.5s;
 }
 
-.codeCaretStyle {
+.blogCaretStyle {
     margin-left: 7.9vw;
     transition: height 0.5s;
 }
 
-.atCaretStyle {
+.codeCaretStyle {
     margin-left: 15.6vw;
+    transition: height 0.5s;
+}
+
+.atCaretStyle {
+    margin-left: 23.4vw;
     transition: height 0.5s;
 }

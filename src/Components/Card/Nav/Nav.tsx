@@ -2,19 +2,21 @@ import React, {useRef, useState} from 'react';
 
 import styles from './Nav.module.scss';
 import Portfolio from "./Contents/Portfolio/Portfolio";
+import Blog from "./Contents/Blog/Blog";
 import Code from "./Contents/Code/Code";
 import At from "./Contents/At/At";
 import Carets from "./Carets/Carets";
 
 function Nav() {
     const portfolioRef = useRef(null);
+    const blogRef = useRef(null);
     const codeRef = useRef(null);
     const atRef = useRef(null);
 
     const [activeCard, setActiveCard] = useState(portfolioRef);
 
     return (
-        <div>
+        <React.Fragment>
             <div className={styles.iconContainerRow}>
                 <button
                     className={
@@ -24,6 +26,16 @@ function Nav() {
                     }
                     ref={portfolioRef}
                     onClick={() => setActiveCard(portfolioRef)}
+                />
+
+                <button
+                    className={
+                        activeCard === blogRef
+                            ? `fa fa-pencil-square-o ${styles.iconStyle} ${styles.iconStyleActive}`
+                            : `fa fa-pencil-square-o ${styles.iconStyle}`
+                    }
+                    ref={blogRef}
+                    onClick={() => setActiveCard(blogRef)}
                 />
 
                 <button
@@ -52,15 +64,16 @@ function Nav() {
                 />
             </div>
 
-            <Carets propObj={{portfolioRef, atRef, codeRef, activeCard}} />
+            <Carets propObj={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />
 
             <div className={styles.cardStyle} >
                 <Portfolio renderCard={activeCard === portfolioRef} />
+                <Blog renderCard={activeCard === blogRef} />
                 <Code renderCard={activeCard === codeRef} />
                 <At renderCard={activeCard === atRef} />
             </div>
 
-        </div>
+        </React.Fragment>
     );
 }
 

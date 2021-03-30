@@ -1,0 +1,27 @@
+.masterDiv {
+    flex-basis: 100%;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.masterDivVisible {
+    transition: 1s;
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+}
+
+.cardTitle {
+    margin-bottom: 0;
+    font-size: 2.5vw;
+}
+
+.cardSubtitle {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 1.1vw;
+
+    color: rgb(98, 98, 98);
+}
+

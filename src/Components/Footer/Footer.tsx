@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-import ReactIcon from '../../Assets/Images/Footer/react.svg';
-import SASSIcon from '../../Assets/Images/Footer/sass.svg';
-import TypeScriptIcon from '../../Assets/Images/Footer/typescript.svg';
+import ReactIcon from '../../static/Images/Footer/react.svg';
+import SASSIcon from '../../static/Images/Footer/sass.svg';
+import TypeScriptIcon from '../../static/Images/Footer/typescript.svg';
 
 function Footer() {
     return (

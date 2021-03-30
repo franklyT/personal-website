@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './At.module.scss';
 
 function At (props:any) {
@@ -6,6 +6,11 @@ function At (props:any) {
   const [verify, setVerify] = useState(0);
   const [verifyInt1] = useState(Math.floor(Math.random() * 9) + 1);
   const [verifyInt2] = useState(Math.floor(Math.random() * 9) + 1);
+  const [verified, setVerified] = useState(false);
+
+  useEffect(() => setVerified(verify === verifyInt1 + verifyInt2), [verify]);
+
+  // TODO: Improve verify check css
 
     return (
       <div
@@ -49,6 +54,9 @@ function At (props:any) {
             required
           />
 
+          <br />
+          <br />
+
           <input
             name="entry.1045781291"
             type="text"
@@ -87,9 +95,11 @@ function At (props:any) {
             type="text"
             placeholder="Verify"
             className={`${styles.cardInput} ${styles.cardInputBox} ${styles.cardInputBoxVerify}`}
-            onChange={evt => setVerify(Number(evt.target.value))}
+            onChange={ evt => setVerify(Number(evt.target.value)) }
             required
           />
+
+          <span style={ verified ? { display: "inline-block" } : { display: "none"} }> &nbsp; ✅ </span>
 
           <br />
           <button className={styles.cardButton} type="submit">

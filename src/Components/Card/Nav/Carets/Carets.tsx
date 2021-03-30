@@ -10,6 +10,11 @@ function Carets(props: any) {
         />
 
         <i
+            className={`${styles.cardCaretStyle} ${styles.blogCaretStyle}`}
+            style={ props.propObj.activeCard === props.propObj.blogRef ? { height: "0px" } : { height: "100px" }}
+        />
+
+        <i
             className={`${styles.cardCaretStyle} ${styles.codeCaretStyle}`}
             style={ props.propObj.activeCard === props.propObj.codeRef ? { height: "0px" } : { height: "100px" }}
         />

@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import styles from "./Code.module.scss";
-import TheresMore from "../../../../../Assets/Images/Card/githubSplash.jpg";
+import TheresMore from "../../../../../static/Images/Card/githubSplash.jpg";
 
 function Code(props: any) {
     const [hoveredProject, setHoveredProject] = useState('');
 
     const githubSplash = (
-        <div>
+        <React.Fragment>
             <br/>
             -&gt; <a href="https://github.com" className={styles.linkGithub}> https://github.com </a> <br/>
             <br/>
@@ -17,7 +17,7 @@ function Code(props: any) {
             &nbsp;\ Frameworks: e.g. jQuery, React, Ruby on Rails, Svelte, Vue <br/>
             &nbsp;\ Platforms/APIs: e.g. Firebase, Heroku, Docker, Google Platforms, Netlify <br/>
             &nbsp;\ Build: e.g. Babel, Gulp, Webpack <br/>
-        </div>
+        </React.Fragment>
     );
 
     return (
