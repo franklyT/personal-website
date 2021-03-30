@@ -13,9 +13,9 @@ function At (props:any) {
   // TODO: Improve verify check css
 
     return (
-      <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
-        <h1 className={styles.title}> Let's chat </h1>
-        <h2 className={styles.subtitle}>
+      <div className={ `${ styles.masterDiv } ${ props.renderCard ? styles.masterDivVisible : null }` } >
+        <h1 className={ styles.title }> Let's chat </h1>
+        <h2 className={ styles.subtitle }>
           I'm always open to new ideas and opportunities (or any type of
           pleasant conversation).
         </h2>
@@ -26,7 +26,7 @@ function At (props:any) {
           title="Contact Form"
           name="hidden_iframe"
           id="hidden_iframe"
-          style={{ display: 'none' }}
+          style={ { display: 'none' } }
           onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; } }
         />
 
@@ -41,7 +41,7 @@ function At (props:any) {
             name="entry.2005620554"
             type="text"
             placeholder="Name"
-            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxName}`}
+            className={ `${styles.input} ${styles.inputBox} ${styles.inputBoxName}` }
             required
           />
 
@@ -52,7 +52,7 @@ function At (props:any) {
             name="entry.1045781291"
             type="text"
             placeholder="Email"
-            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxEmail}`}
+            className={ `${styles.input} ${styles.inputBox} ${styles.inputBoxEmail}` }
             required
           />
 
@@ -62,7 +62,7 @@ function At (props:any) {
             name="entry.50456214"
             type="text"
             placeholder="Subject"
-            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxSubject}`}
+            className={ `${styles.input} ${styles.inputBox} ${styles.inputBoxSubject}` }
             required
           />
 
@@ -71,7 +71,7 @@ function At (props:any) {
           <textarea
             name="entry.839337160"
             placeholder="Message"
-            className={`${styles.input} ${styles.textarea}`}
+            className={ `${styles.input} ${styles.textarea}` }
             required
           />
 
@@ -81,7 +81,7 @@ function At (props:any) {
             name="verify"
             type="text"
             placeholder="Verify"
-            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxVerify}`}
+            className={ `${styles.input} ${styles.inputBox} ${styles.inputBoxVerify}` }
             onChange={ evt => setVerifyInput(Number(evt.target.value)) }
             required
           />
@@ -89,7 +89,7 @@ function At (props:any) {
           <span style={ verified ? { display: "inline-block" } : { display: "none"} }> &nbsp; ✅ </span>
 
           <br />
-          <button className={styles.submit} type="submit">
+          <button className={ styles.submit } type="submit">
             Submit
           </button>
         </form>
