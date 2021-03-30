@@ -4,11 +4,11 @@ import styles from './At.module.scss';
 function At (props:any) {
   const [submitted, setSubmitted] = useState(false);
   const [verify, setVerify] = useState(0);
-  const [verifyInt1] = useState(Math.floor(Math.random() * 9) + 1);
-  const [verifyInt2] = useState(Math.floor(Math.random() * 9) + 1);
+  const [verifyNum1] = useState(Math.floor(Math.random() * 9) + 1);
+  const [verifyNum2] = useState(Math.floor(Math.random() * 9) + 1);
   const [verified, setVerified] = useState(false);
 
-  useEffect(() => setVerified(verify === verifyInt1 + verifyInt2), [verify, verifyInt1, verifyInt2]);
+  useEffect( () => setVerified(verify === verifyNum1 + verifyNum2), [verify, verifyNum1, verifyNum2] );
 
   // TODO: Improve verify check css
 
@@ -34,7 +34,7 @@ function At (props:any) {
           action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
           method="post"
           target="hidden_iframe"
-          onSubmit={() => { if (verify === (verifyInt1 + verifyInt2)) setSubmitted(true); }}
+          onSubmit={() => { if (verify === (verifyNum1 + verifyNum2)) setSubmitted(true); }}
         >
 
           <input
@@ -75,7 +75,7 @@ function At (props:any) {
             required
           />
 
-          <span> What is {verifyInt1} + {verifyInt2}? <span role="img" className={styles.mrRoboto}> 🤖🚫 </span> </span>
+          <span> What is {verifyNum1} + {verifyNum2}? <span role="img" className={styles.mrRoboto}> 🤖🚫 </span> </span>
 
           <input
             name="verify"
