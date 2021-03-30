@@ -14,13 +14,14 @@ function At (props:any) {
 
     return (
       <div className={ `${styles.masterDiv} ${props.renderCard ? styles.masterDivVisible : null}` } >
-        <h1 className={styles.cardTitle}> Let's chat </h1>
-        <h2 className={styles.cardSubtitle}>
+        <h1 className={styles.title}> Let's chat </h1>
+        <h2 className={styles.subtitle}>
           I'm always open to new ideas and opportunities (or any type of
           pleasant conversation).
         </h2>
 
         <br />
+
         <iframe
           title="Contact Form"
           name="hidden_iframe"
@@ -28,6 +29,7 @@ function At (props:any) {
           style={{ display: 'none' }}
           onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; }}
         />
+
         <form
           action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
           method="post"
@@ -39,7 +41,7 @@ function At (props:any) {
             name="entry.2005620554"
             type="text"
             placeholder="Name"
-            className={`${styles.cardInput} ${styles.cardInputBox} ${styles.cardInputBoxName}`}
+            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxName}`}
             required
           />
 
@@ -50,7 +52,7 @@ function At (props:any) {
             name="entry.1045781291"
             type="text"
             placeholder="Email"
-            className={`${styles.cardInput} ${styles.cardInputBox} ${styles.cardInputBoxEmail}`}
+            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxEmail}`}
             required
           />
 
@@ -60,7 +62,7 @@ function At (props:any) {
             name="entry.50456214"
             type="text"
             placeholder="Subject"
-            className={`${styles.cardInput} ${styles.cardInputBox} ${styles.cardInputBoxSubject}`}
+            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxSubject}`}
             required
           />
 
@@ -69,21 +71,17 @@ function At (props:any) {
           <textarea
             name="entry.839337160"
             placeholder="Message"
-            className={`${styles.cardInput} ${styles.cardTextarea}`}
+            className={`${styles.input} ${styles.textarea}`}
             required
           />
-          What is {verifyInt1} + {verifyInt2}?
-          <span
-            role="img"
-            aria-label="Robot Emoji"
-            className={styles.cardMrRoboto}
-          >🤖🚫</span>
+
+          <span> What is {verifyInt1} + {verifyInt2}? <span role="img" className={styles.mrRoboto}> 🤖🚫 </span> </span>
 
           <input
             name="verify"
             type="text"
             placeholder="Verify"
-            className={`${styles.cardInput} ${styles.cardInputBox} ${styles.cardInputBoxVerify}`}
+            className={`${styles.input} ${styles.inputBox} ${styles.inputBoxVerify}`}
             onChange={ evt => setVerify(Number(evt.target.value)) }
             required
           />
@@ -91,7 +89,7 @@ function At (props:any) {
           <span style={ verified ? { display: "inline-block" } : { display: "none"} }> &nbsp; ✅ </span>
 
           <br />
-          <button className={styles.cardButton} type="submit">
+          <button className={styles.submit} type="submit">
             Submit
           </button>
         </form>

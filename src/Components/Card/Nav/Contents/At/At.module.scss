@@ -12,12 +12,12 @@
     pointer-events: auto;
 }
 
-.cardTitle {
+.title {
     margin-bottom: 0;
     font-size: 2.5vw;
 }
 
-.cardSubtitle {
+.subtitle {
     margin-bottom: 0;
     font-weight: 300;
     font-size: 1.1vw;
@@ -25,13 +25,13 @@
     color: rgb(98, 98, 98);
 }
 
-.cardInput {
+.input {
     &:focus::placeholder {
         color: transparent;
     }
 }
 
-.cardInputBox {
+.inputBox {
     display: inline-flex;
 
     background: rgba(240, 240, 240, 1);
@@ -45,31 +45,30 @@
     padding-left: .7vw;
 }
 
-.cardInputBoxName {
+.inputBoxName {
     margin-right: 1vw;
 }
 
-.cardInputBoxEmail {
+.inputBoxEmail {
     // placeholder
     margin: 0;
 
     width: 47.3%;
 }
 
-.cardInputBoxSubject {
+.inputBoxSubject {
     // Double width + margin-right
     width: (48.3 + 1vw);
 }
 
-.cardInputBoxVerify {
+.inputBoxVerify {
     // Double width + margin-right
-    margin-left: 1em;
     margin-bottom: 1.5em;
     margin-top: -1.5em;
     width: 10em;
 }
 
-.cardTextarea {
+.textarea {
     resize: none;
 
     display: inline-flex;
@@ -88,12 +87,11 @@
     padding-top: 1.5vh;
 }
 
-.cardMrRoboto {
-    margin-left: 1em;
+.mrRoboto {
     font-size: 1.3em;
 }
 
-.cardButton {
+.submit {
     border: none;
     height: auto;
     width: fit-content;
@@ -117,6 +115,6 @@
     }
 }
 
-.cardLinkGithub {
+.linkGithub {
     color: rgb(60, 170, 255);
 }
