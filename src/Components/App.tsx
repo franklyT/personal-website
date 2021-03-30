@@ -11,7 +11,7 @@ function App() {
 
         <button
           onClick={() => window.open("https://github.com/franklyT/", "_blank")}
-          className={`fa fa-github ${styles.iconStyle} ${styles.mobileGithubIcon}`}
+          className={`fa fa-github ${styles.mobileGithubIcon}`}
         />
 
         <div className={styles.container}>

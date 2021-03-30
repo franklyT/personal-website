@@ -42,10 +42,10 @@ function Nav() {
                     onClick={() => setActiveCard(atRef)}
                 />
 
-                <button
+                {/* <button
                     className={`fa fa-github ${styles.iconStyle}`}
                     onClick={() => window.open('https://github.com/franklyT')}
-                />
+                />*/}
             </div>
 
             <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />

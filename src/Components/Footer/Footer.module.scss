@@ -4,12 +4,20 @@
     color: white;
 }
 
+.me {
+    font-size: 0.8em;
+    color: lime;
+    font-style: italic;
+    transition: color 2s;
+    // text-shadow: 0 0 10px #fff, 0 0 7.5px #0b2dc4, 0 0 10px #0b2dc4;
+}
+
 .icon {
-    height: 4vh;
+    height: 3vh;
     width: 2vw;
 
-    margin-right: .5vw;
-    margin-bottom: 8vh;
+    margin-top: 0.5em;
+    margin-right: 0.2em;
 
     &:hover {
         cursor: pointer;
@@ -17,6 +25,8 @@
 }
 
 .break {
+    height: 4em;
+
     @media only screen and (max-width: 600px) {
         display: none;
     }
