@@ -9,8 +9,8 @@ import {materialDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 function HighlightSyntax(props: {code: string} ) {
     return (
         <React.Fragment>
-            <SyntaxHighlighter language="jsx" style={materialDark} customStyle={{border: 'none', fontSize: '1.1em'}}>
-                {props.code}
+            <SyntaxHighlighter language="jsx" style={ materialDark } customStyle={ { border: 'none', fontSize: '0.75vw' } }>
+                { props.code }
             </SyntaxHighlighter>
         </React.Fragment>
     )

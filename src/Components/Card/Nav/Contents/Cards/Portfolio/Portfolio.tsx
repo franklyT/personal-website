@@ -8,10 +8,10 @@ function Portfolio(props: any) {
 
     const PortfolioRPGText =
       <div className={styles.portraitStyleBox}>
-        Name: Winry <br /> Class: Feline <br /> Faction: Frank <br /> <br />
-        STATS <br /> <br /> AGI: 8 <br /> CHR: 10 <br/> INT: 2 <br />
-        STR: 2 <br /> <br /> SKILLS <br /> <br /> Catlike Reflexes <br />
-        Mascot <br /> Endless Hunger
+          {/* Name: Winry <br /> Class: Feline <br /> Faction: Frank <br /> <br />
+              STATS <br /> <br /> AGI: 8 <br /> CHR: 10 <br/> INT: 2 <br />
+              STR: 2 <br /> <br /> SKILLS <br /> <br /> Catlike Reflexes <br />
+              Mascot <br /> Endless Hunger */}
       </div>;
 
     return (

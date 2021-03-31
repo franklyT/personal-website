@@ -1,6 +1,6 @@
 @import '../../../../../../SCSS/animations';
 
-$bgImage: url('../../../../../../static/Images/Card/cat.jpg');
+$bgImage: url('../../../../../../static/Images/Portfolio/francis.png');
 
 code {
     animation: fadeIn 1s;
@@ -35,13 +35,14 @@ code {
 .portrait {
     background-image: $bgImage;
     background-size: cover;
-  
+
     display: flex;
-    height: 40vh;
-    width: 25vw;
+    height: 23em;
+    width: 20em;
 
     margin: -3vh -1vw -2vh auto;
-
+    margin-top: -8vh;
+    margin-left: 2em;
     z-index: 5;
     position: relative;
 

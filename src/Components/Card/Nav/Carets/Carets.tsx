@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Carets.module.scss';
 
+// TODO: Refactor this entire concept... it's too dependent on media queries.
+
 function Carets(props: any) {
     return (
       <div className={styles.containerRow}>
