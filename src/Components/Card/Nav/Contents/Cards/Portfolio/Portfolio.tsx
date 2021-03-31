@@ -19,7 +19,7 @@ function Portfolio(props: any) {
             { props.renderCode ? <React.Fragment> {getPortfolioText} </React.Fragment> :
                 <React.Fragment>
                     <div className={styles.meContainer}>
-                        <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret}/></h1>
+                        <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret}/> </h1>
                         <h2 className={styles.meTitleStyle}>
                             Web Developer
                         </h2>
@@ -30,7 +30,7 @@ function Portfolio(props: any) {
                     onMouseLeave={() => setHoveredCheck(false)}
                     className={styles.portraitContainer}
                     >
-                {PortfolioRPGText}
+                        {PortfolioRPGText}
                     <div
                     className={hoveredCheck ? `${styles.portrait} ${styles.portraitHover}` : styles.portrait}
                     />
