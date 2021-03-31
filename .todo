@@ -3,3 +3,5 @@ Move code tag from bottom -> figure out how to make it work, e.g. where to put i
 Fade in every card even when we go BACK to the original card FROM code using fadeIn mixin
 
 extract other components, like "nav"
+
+show basic file dependencies too for visual code elements
