@@ -1,13 +1,13 @@
 import React, {useRef, useState} from 'react';
 
 import styles from './Nav.module.scss';
-import Portfolio from "./Contents/Portfolio/Portfolio";
-import Blog from "./Contents/Blog/Blog";
-import Code from "./Contents/Code/Code";
-import At from "./Contents/At/At";
+import Portfolio from "./Contents/Cards/Portfolio/Portfolio";
+import Blog from "./Contents/Cards/Blog/Blog";
+import Code from "./Contents/Cards/Code/Code";
+import At from "./Contents/Cards/At/At";
 import Carets from "./Carets/Carets";
 
-function Nav() {
+function Nav(props: any) {
     const portfolioRef = useRef(null);
     const blogRef = useRef(null);
     const codeRef = useRef(null);
@@ -51,7 +51,7 @@ function Nav() {
             <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />
 
             <div className={styles.cardStyle} >
-                <Portfolio renderCard={activeCard === portfolioRef} />
+                <Portfolio renderCard={activeCard === portfolioRef} renderCode={props.propObj.code} />
                 <Blog renderCard={activeCard === blogRef} />
                 <Code renderCard={activeCard === codeRef} />
                 <At renderCard={activeCard === atRef} />

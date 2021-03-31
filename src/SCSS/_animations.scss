@@ -8,3 +8,13 @@
     text-shadow: 0 0 10px #fff, 0 0 7.5px $glowColor, 0 0 10px $glowColor;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -45,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^13.5.0",
+    "react-syntax-highlighter": "^15.4.3"
   }
 }

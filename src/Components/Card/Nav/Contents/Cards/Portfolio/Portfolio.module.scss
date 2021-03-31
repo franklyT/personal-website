@@ -1,4 +1,10 @@
-$bgImage: url('../../../../../static/Images/Card/cat.jpg');
+@import '../../../../../../SCSS/animations';
+
+$bgImage: url('../../../../../../static/Images/Card/cat.jpg');
+
+code {
+    animation: fadeIn 1s;
+}
 
 .masterDiv {
     flex-basis: 100%;
