@@ -19,6 +19,9 @@ function Portfolio(props: any) {
                     <div className={styles.oneAndOnlyDiv}>
                         <p> Explanation stuff in the div. </p>
                         <p> Some more lines. </p>
+                        <p> Another line. </p>
+                        <p> Finally, a line. </p> 
+                        <p> Just kidding! Another line. You udder fool!</p>
                     </div>
 
                     <img className={styles.portrait} src={portrait} />

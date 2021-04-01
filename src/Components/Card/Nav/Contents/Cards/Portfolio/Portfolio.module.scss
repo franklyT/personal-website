@@ -28,6 +28,12 @@
     right: -24vw;
 
     z-index: 100;
+
+    @media(min-width: 800px) {
+        height: 9em;
+        right: -27vw;
+        top: 3vh;
+    }
 }
 
 .oneAndOnlyDiv {
@@ -46,6 +52,12 @@
     top: -3vh;
     background: #151515;
     z-index: 101;
+
+    @media(min-width: 800px) {
+        right: -18vw;
+        top: -5vh;
+        width: 38vh;
+    }
 
     &:before {
         content: "";
@@ -67,7 +79,7 @@
         right: -2.2em;
         bottom: 50%;
 
-        border-left: 20px solid black;
+        border-left: 20px solid #151515;
         border-right: 20px solid transparent;
         border-top: 20px solid transparent;
         border-bottom: 20px solid transparent;

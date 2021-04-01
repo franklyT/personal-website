@@ -4,41 +4,37 @@ import styles from './At.module.scss';
 function At (props:any) {
   const [submitted, setSubmitted] = useState(false);
   const [verifyInput, setVerifyInput] = useState(0);
-  const [verifyNums] = useState({one: Math.floor(Math.random() * 9) + 1, two: Math.floor(Math.random() * 9) + 1})
+  const [verifyNum1] = useState(Math.floor(Math.random() * 9) + 1);
+  const [verifyNum2] = useState(Math.floor(Math.random() * 9) + 1);
   const [verified, setVerified] = useState(false);
 
-  useEffect( () => setVerified(verifyInput === verifyNums.one + verifyNums.two), [verifyInput, verifyNums.one, verifyNums.two] );
+  useEffect( () => setVerified(verifyInput === verifyNum1 + verifyNum2), [verifyInput, verifyNum1, verifyNum2] );
 
   // TODO: Improve verify check css
 
     return (
-        <div className={ `${styles.masterDiv} ${props.renderCard && styles.masterDivVisible}` } >
-            <h1 className={styles.title}> Let's chat </h1>
-            <h2 className={styles.subtitle}>
-                I'm always open to new ideas and opportunities (or any type of
-                pleasant conversation).
-            </h2>
+      <div className={ `${ styles.masterDiv } ${ props.renderCard ? styles.masterDivVisible : null }` } >
+        <h1 className={ styles.title }> Let's chat </h1>
+        <h2 className={ styles.subtitle }>
+          I'm always open to new ideas and opportunities (or any type of
+          pleasant conversation).
+        </h2>
+        <br />
 
-            <br/>
+        <iframe
+          title="Contact Form"
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style={ { display: 'none' } }
+          onLoad={ () => { if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks'; } }
+        />
 
-            <iframe
-                title="Contact Form"
-                name="hidden_iframe"
-                id="hidden_iframe"
-                style={{display: 'none'}}
-                onLoad={() => {
-                    if (submitted) (window as any).location = 'https://github.com/franklyT/portfolio-thanks';
-                }}
-            />
-
-            <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
-                method="post"
-                target="hidden_iframe"
-                onSubmit={() => {
-                    if (verifyInput === (verifyNums.one + verifyNums.two)) setSubmitted(true);
-                }}
-            >
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfEduqkAM9Dma3wZHe85FPVjGUGjJWkaYyOAww-v0_GaRGqwQ/formResponse"
+          method="post"
+          target="hidden_iframe"
+          onSubmit={ () => { if (verifyInput === (verifyNum1 + verifyNum2)) setSubmitted(true); } }
+        >
 
           <input
             name="entry.2005620554"
@@ -78,7 +74,7 @@ function At (props:any) {
             required
           />
 
-          <span> What is {verifyNums.one} + {verifyNums.two}? <span role="img" className={styles.mrRoboto}> 🤖🚫 </span> </span>
+          <span> What is {verifyNum1} + {verifyNum2}? <span role="img" className={styles.mrRoboto}> 🤖🚫 </span> </span>
 
           <input
             name="verify"
