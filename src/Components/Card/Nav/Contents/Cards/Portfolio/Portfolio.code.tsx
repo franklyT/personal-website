@@ -3,8 +3,8 @@
 import HighlightSyntax from "../../Meta/HighlightSyntax/HighlightSyntax";
 
 const getPortfolioText = (
-    <>
-        <HighlightSyntax language={"scss"} code={`
+<>
+<HighlightSyntax language={"scss"} code={/*css*/`
 // Portfolio.module.scss
 
 @import '../../../../../../SCSS/animations';
@@ -125,55 +125,44 @@ const getPortfolioText = (
     padding-top: 2vh;
 }
 `} />
-        <HighlightSyntax language={"jsx"} code={`
+<HighlightSyntax language={"jsx"} code={/*jsx*/`
 // Portfolio.tsx
 
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Portfolio.module.scss';
 
 import getPortfolioText from './Portfolio.code';
 
+import portrait from '../../../../../../static/Images/Portfolio/francis.png';
+
 function Portfolio(props: any) {
-    const [hoveredCheck, setHoveredCheck] = useState(false);
-
-    const PortfolioRPGText =
-      <div className={styles.portraitStyleBox}>
-        Name: Winry <br /> Class: Feline <br /> Faction: Frank <br /> <br />
-        STATS <br /> <br /> AGI: 8 <br /> CHR: 10 <br/> INT: 2 <br />
-        STR: 2 <br /> <br /> SKILLS <br /> <br /> Catlike Reflexes <br />
-        Mascot <br /> Endless Hunger
-      </div>;
-
     return (
-        <div className={ \`\${styles.masterDiv} \${props.renderCard && styles.masterDivVisible}\` } >
-            { props.renderCode ? <React.Fragment> {getPortfolioText} </React.Fragment> :
-                <React.Fragment>
+        <div className={\`\${styles.masterDiv} \${props.renderCard && styles.masterDivVisible}\`}>
+            { props.renderCode ? <> {getPortfolioText} </> :
+                <>
                     <div className={styles.meContainer}>
-                        <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret}/></h1>
+                        <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret} /> </h1>
                         <h2 className={styles.meTitleStyle}>
                             Web Developer
                         </h2>
                     </div>
 
-                    <div
-                    onMouseEnter={() => setHoveredCheck(true)}
-                    onMouseLeave={() => setHoveredCheck(false)}
-                    className={styles.portraitContainer}
-                    >
-                {PortfolioRPGText}
-                    <div
-                    className={hoveredCheck ? \`\${styles.portrait} \${styles.portraitHover}\` : styles.portrait}
-                    />
+                    <div className={styles.oneAndOnlyDiv}>
+                        <p> Explanation stuff in the div. </p>
+                        <p> Some more lines. </p>
                     </div>
-                </React.Fragment>
+
+                    <img className={styles.portrait} src={portrait} />
+                </>
             }
         </div>
     );
 }
 
 export default Portfolio;
-`}/>
 
-    </>);
+`} />
+
+</>);
 
 export default getPortfolioText;
