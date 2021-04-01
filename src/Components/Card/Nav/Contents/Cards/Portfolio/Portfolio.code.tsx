@@ -128,7 +128,6 @@ const getPortfolioText = (
 <HighlightSyntax language={"jsx"} code={/*jsx*/`
 // Portfolio.tsx
 
-import React from 'react';
 import styles from './Portfolio.module.scss';
 
 import getPortfolioText from './Portfolio.code';

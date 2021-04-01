@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import styles from "./Code.module.scss";
 import TheresMore from "../../../../../../static/Images/Card/githubSplash.jpg";
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Blog.module.scss';
 
 import Pages from './Pages/Pages';

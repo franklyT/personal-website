@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as PageIndex from "./Pages.index";
 import {Entry} from "./Entries/Interface/Entry";
 

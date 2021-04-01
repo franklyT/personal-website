@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 import Nav from "./Nav/Nav";
 import Utils from "./Utils/Utils";
