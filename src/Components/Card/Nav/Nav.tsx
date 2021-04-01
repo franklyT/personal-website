@@ -31,7 +31,7 @@ function Nav(props: any) {
                 />
 
                 <button
-                    className={ `fa fa-code ${activeCard === codeRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
+                    className={ `fa fa-github ${activeCard === codeRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
                     ref={codeRef}
                     onClick={() => setActiveCard(codeRef)}
                 />

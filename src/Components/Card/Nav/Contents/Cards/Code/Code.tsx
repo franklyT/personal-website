@@ -23,7 +23,7 @@ function Code(props: any) {
     return (
         <div className={ `${styles.masterDiv} ${props.renderCard && styles.masterDivVisible}` } >
             <div className={styles.grid}>
-                <div className={styles.title}> Work</div>
+                {/* <div className={styles.title}> Work</div> */}
 
                 <img
                     src={TheresMore}
