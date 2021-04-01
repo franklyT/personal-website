@@ -1,6 +1,6 @@
 CURRENT FOCUS:
 
-make the base layout visually appealing, refactor it, too
+make the base layout visually appealing, refactor it, too (one idea is to pass down props to style initial card in higher scope)
 
 write some valid blog posts
 
