@@ -7,8 +7,7 @@ import Footer from "./Footer/Footer";
 
 function App() {
    return (
-      <React.Fragment>
-
+      <>
         <button
           onClick={() => window.open("https://github.com/franklyT/", "_blank")}
           className={`fa fa-github ${styles.mobileGithubIcon}`}
@@ -19,8 +18,7 @@ function App() {
         </div>
 
         <Footer />
-
-      </React.Fragment>
+      </>
     );
 }
 export default App;

@@ -1,3 +1,5 @@
+min portfolio photo, keep it in active memory with preloader
+
 Move code tag from bottom -> figure out how to make it work, e.g. where to put it
 
 Fade in every card even when we go BACK to the original card FROM code using fadeIn mixin

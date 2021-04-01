@@ -16,7 +16,7 @@ function Nav(props: any) {
     const [activeCard, setActiveCard] = useState(portfolioRef);
 
     return (
-        <React.Fragment>
+        <>
             <div className={styles.iconContainerRow}>
                 <button
                     className={ `fa fa-user-circle ${activeCard === portfolioRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
@@ -56,8 +56,7 @@ function Nav(props: any) {
                 <Code renderCard={activeCard === codeRef} />
                 <At renderCard={activeCard === atRef} />
             </div>
-
-        </React.Fragment>
+        </>
     );
 }
 

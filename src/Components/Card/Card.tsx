@@ -7,10 +7,10 @@ function Card() {
     const [code, setCode] = useState(false);
 
     return (
-        <React.Fragment>
+        <>
             <Nav propObj={{setCode, code}} />
             <Utils propObj={{setCode, code}} />
-        </React.Fragment>
+        </>
     );
 }
 

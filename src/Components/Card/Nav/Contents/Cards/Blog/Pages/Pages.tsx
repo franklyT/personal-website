@@ -9,7 +9,8 @@ function Pages() {
 
     const collatePages: Entry[] = Object.values(PageIndex).sort((a, b) => sanitizeDate(a.date) > sanitizeDate(b.date) ? 1 : -1);
 
-    return (<React.Fragment>
+    return (
+        <>
         {collatePages.map((page, index) => {
             return <div key={index}>
                 <h1>
@@ -27,7 +28,8 @@ function Pages() {
                 <br/>
             </div>
         })}
-    </React.Fragment>)
+        </>
+    )
 }
 
 export default Pages;
