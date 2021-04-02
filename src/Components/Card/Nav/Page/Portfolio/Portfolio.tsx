@@ -1,10 +1,7 @@
 import { useEffect } from 'react';
-
-import styles from './Portfolio.module.scss';
-
 import SyntaxParser from '../SyntaxParser/SyntaxParser';
-
 import code from './Portfolio.code';
+import styles from './Portfolio.module.scss';
 
 function Portfolio(props: any) {
     useEffect(() => {
@@ -30,7 +27,7 @@ function Portfolio(props: any) {
     function getCode() {
         return (
             <div className={styles.masterDiv}>
-                <SyntaxParser language={"scss"} code={code.portfolioSCSS} /> <SyntaxParser language={"jsx"} code={code.portfolioJSX} />
+                <SyntaxParser language={"jsx"} code={code.portfolioJSX} /> <SyntaxParser language={"scss"} code={code.portfolioSCSS} />
             </div>
         );
     }
