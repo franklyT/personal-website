@@ -1,13 +1,14 @@
 import {useRef, useState} from 'react';
 
 import styles from './Nav.module.scss';
-import Portfolio from "./Contents/Cards/Portfolio/Portfolio";
-import Blog from "./Contents/Cards/Blog/Blog";
-import Code from "./Contents/Cards/Code/Code";
-import At from "./Contents/Cards/At/At";
+import Portfolio from "./Page/Portfolio/Portfolio";
+import Blog from "./Page/Blog/Blog";
+import Code from "./Page/Code/Code";
+import At from "./Page/At/At";
 import Carets from "./Carets/Carets";
 
 function Nav(props: any) {
+    const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
     const portfolioRef = useRef(null);
     const blogRef = useRef(null);
     const codeRef = useRef(null);
@@ -43,13 +44,13 @@ function Nav(props: any) {
                 />
             </div>
 
-            <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} />
+            <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} parentProps={props.propObj.code} />
 
-            <div className={styles.cardStyle} >
-                <Portfolio renderCard={activeCard === portfolioRef} renderCode={props.propObj.code} />
-                <Blog renderCard={activeCard === blogRef} />
-                <Code renderCard={activeCard === codeRef} />
-                <At renderCard={activeCard === atRef} />
+            <div className={cardStyle} >
+                <Portfolio renderCard={activeCard === portfolioRef} renderCode={props.propObj.code} propObj={{setCardStyle}} />
+                <Blog renderCard={activeCard === blogRef} propObj={{setCardStyle}} />
+                <Code renderCard={activeCard === codeRef} propObj={{setCardStyle}} />
+                <At renderCard={activeCard === atRef} propObj={{setCardStyle}} />
             </div>
         </>
     );

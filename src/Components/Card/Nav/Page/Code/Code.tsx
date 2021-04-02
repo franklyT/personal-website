@@ -1,9 +1,14 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import styles from "./Code.module.scss";
-import TheresMore from "../../../../../../static/Images/Card/githubSplash.jpg";
+import TheresMore from "../../../../../static/Images/Card/githubSplash.jpg";
 
 function Code(props: any) {
     const [hoveredProject, setHoveredProject] = useState('');
+
+    useEffect( ()=> {
+        props.renderCard && props.propObj.setCardStyle(styles.cardStyle);
+        props.renderCode && props.propObj.setCardStyle(styles.renderCode);
+      }, [props.renderCard, props.renderCode, props.propObj]);
 
     const githubSplash = (
         <>

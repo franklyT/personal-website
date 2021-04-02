@@ -6,8 +6,10 @@ write some valid blog posts
 
 fix work card, maybe re-work it, or make it an explicit github link, including icon
 
+refac contents into larger component
 
 
+grid-based card
 
 min portfolio photo, keep it in active memory with preloader
 

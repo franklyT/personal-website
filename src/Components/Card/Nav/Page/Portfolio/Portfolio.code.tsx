@@ -1,10 +1,6 @@
-// @ts-nocheck
-
-import HighlightSyntax from "../../Meta/HighlightSyntax/HighlightSyntax";
-
-const getPortfolioText = (
-<>
-<HighlightSyntax language={"scss"} code={/*css*/`
+const code = {
+portfolioSCSS:
+/*css*/`
 // Portfolio.module.scss
 
 @import '../../../../../../SCSS/animations';
@@ -124,8 +120,10 @@ const getPortfolioText = (
 
     padding-top: 2vh;
 }
-`} />
-<HighlightSyntax language={"jsx"} code={/*jsx*/`
+`,
+
+portfolioJSX:
+/*jsx*/`
 // Portfolio.tsx
 
 import styles from './Portfolio.module.scss';
@@ -160,8 +158,7 @@ function Portfolio(props: any) {
 
 export default Portfolio;
 
-`} />
+`
+}
 
-</>);
-
-export default getPortfolioText;
+export default code;

@@ -10,6 +10,12 @@ function At (props:any) {
 
   useEffect( () => setVerified(verifyInput === verifyNum1 + verifyNum2), [verifyInput, verifyNum1, verifyNum2] );
 
+  useEffect( ()=> {
+    props.renderCard && props.propObj.setCardStyle(styles.cardStyle);
+    props.renderCode && props.propObj.setCardStyle(styles.renderCode);
+  }, [props.renderCard, props.renderCode, props.propObj]);
+
+
   // TODO: Improve verify check css
 
     return (
