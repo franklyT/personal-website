@@ -20,7 +20,7 @@ function Nav(props: any) {
                         { icon: "fa-pencil-square-o", card: RenderedCard.blog },
                         { icon: "fa-github", card: RenderedCard.code },
                         { icon: "fa-at", card: RenderedCard.at }
-                    ].map((button: any, key: number) => {
+                    ].map((button: {icon: string, card: RenderedCard}, key: number) => {
                         return <button
                                 key={key}
                                 className={`fa ${button.icon} ${styles.iconStyle} ${activeCard === button.card && styles.iconStyleActive}`}
