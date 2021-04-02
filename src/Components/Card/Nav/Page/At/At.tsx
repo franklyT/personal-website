@@ -10,16 +10,14 @@ function At (props:any) {
 
   useEffect( () => setVerified(verifyInput === verifyNum1 + verifyNum2), [verifyInput, verifyNum1, verifyNum2] );
 
-  useEffect( ()=> {
-    props.renderCard && props.propObj.setCardStyle(styles.cardStyle);
-    props.renderCode && props.propObj.setCardStyle(styles.renderCode);
-  }, [props.renderCard, props.renderCode, props.propObj]);
-
+  useEffect(() => {
+    props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
+}, [props.renderCode, props.cardStyle]);
 
   // TODO: Improve verify check css
 
     return (
-      <div className={ `${ styles.masterDiv } ${ props.renderCard ? styles.masterDivVisible : null }` } >
+      <div className={ styles.container} >
         <h1 className={ styles.title }> Let's chat </h1>
         <h2 className={ styles.subtitle }>
           I'm always open to new ideas and opportunities (or any type of

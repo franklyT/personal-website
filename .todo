@@ -1,5 +1,9 @@
 CURRENT FOCUS:
 
+keep refactoring "page" component, passing down through portfolio
+
+use context API to drill props
+
 make the base layout visually appealing, refactor it, too (one idea is to pass down props to style initial card in higher scope)
 
 write some valid blog posts
@@ -8,7 +12,9 @@ fix work card, maybe re-work it, or make it an explicit github link, including i
 
 refac contents into larger component
 
+simplify all components, such as nav
 
+make renderComponent between props or card come from higher order component?
 
 type props
 
@@ -25,6 +31,8 @@ extract other components, like "nav"
 show basic file dependencies too for visual code elements
 
 write interfaces for props
+
+reconsider use of enum
 
 Pie in the sky:
 add code editor to code page

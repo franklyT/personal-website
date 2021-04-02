@@ -1,14 +1,13 @@
 import {useState, useEffect} from 'react';
 import styles from "./Code.module.scss";
-import TheresMore from "../../../../../static/Images/Card/githubSplash.jpg";
+import TheresMore from "../../../../../static/images/Card/githubSplash.jpg";
 
 function Code(props: any) {
     const [hoveredProject, setHoveredProject] = useState('');
 
-    useEffect( ()=> {
-        props.renderCard && props.propObj.setCardStyle(styles.cardStyle);
-        props.renderCode && props.propObj.setCardStyle(styles.renderCode);
-      }, [props.renderCard, props.renderCode, props.propObj]);
+        useEffect(() => {
+            props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
+        }, [props.renderCode, props.cardStyle]);
 
     const githubSplash = (
         <>
@@ -26,7 +25,7 @@ function Code(props: any) {
     );
 
     return (
-        <div className={ `${styles.masterDiv} ${props.renderCard && styles.masterDivVisible}` } >
+        <div className={styles.container} >
             <div className={styles.grid}>
                 {/* <div className={styles.title}> Work</div> */}
 

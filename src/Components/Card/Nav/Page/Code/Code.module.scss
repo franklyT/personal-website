@@ -16,19 +16,13 @@
     transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
 }
 
-.masterDiv {
+.container {
     flex-basis: 100%;
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-    margin-bottom: -2vh;
-}
+    padding-right: 10vw;
+    margin-right: -10vw;
 
-.masterDivVisible {
     transition: 1s;
-    opacity: 1;
     position: relative;
-    pointer-events: auto;
 }
 
 .grid {

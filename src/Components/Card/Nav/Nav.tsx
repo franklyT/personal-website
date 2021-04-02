@@ -1,56 +1,39 @@
-import {useRef, useState} from 'react';
+import { useState } from 'react';
+import RenderedCard from '../../../static/shared/RenderedCard';
 
 import styles from './Nav.module.scss';
-import Portfolio from "./Page/Portfolio/Portfolio";
-import Blog from "./Page/Blog/Blog";
-import Code from "./Page/Code/Code";
-import At from "./Page/At/At";
+
 import Carets from "./Carets/Carets";
+import Page from "./Page/Page";
 
 function Nav(props: any) {
-    const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
-    const portfolioRef = useRef(null);
-    const blogRef = useRef(null);
-    const codeRef = useRef(null);
-    const atRef = useRef(null);
 
-    const [activeCard, setActiveCard] = useState(portfolioRef);
+    const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
+    const [activeCard, setActiveCard] = useState(RenderedCard.portfolio);
 
     return (
         <>
             <div className={styles.iconContainerRow}>
-                <button
-                    className={ `fa fa-user-circle ${activeCard === portfolioRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
-                    ref={portfolioRef}
-                    onClick={() => setActiveCard(portfolioRef)}
-                />
-
-                <button
-                    className={ `fa fa-pencil-square-o ${activeCard === blogRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
-                    ref={blogRef}
-                    onClick={() => setActiveCard(blogRef)}
-                />
-
-                <button
-                    className={ `fa fa-github ${activeCard === codeRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
-                    ref={codeRef}
-                    onClick={() => setActiveCard(codeRef)}
-                />
-
-                <button
-                    className={ `fa fa-at ${activeCard === atRef ? `${styles.iconStyle} ${styles.iconStyleActive}` : styles.iconStyle}` }
-                    ref={atRef}
-                    onClick={() => setActiveCard(atRef)}
-                />
+                {
+                    [
+                        { icon: "fa-user-circle", card: RenderedCard.portfolio },
+                        { icon: "fa-pencil-square-o", card: RenderedCard.blog },
+                        { icon: "fa-github", card: RenderedCard.code },
+                        { icon: "fa-at", card: RenderedCard.at }
+                    ].map((button: any, key: number) => {
+                        return <button
+                                key={key}
+                                className={`fa ${button.icon} ${styles.iconStyle} ${activeCard === button.card && styles.iconStyleActive}`}
+                                onClick={() => setActiveCard(button.card)} 
+                                />
+                    })
+                }
             </div>
 
-            <Carets parentState={{portfolioRef, blogRef, codeRef, atRef, activeCard}} parentProps={props.propObj.code} />
+            <Carets parentState={{ activeCard }} parentProps={props.propObj.code} />
 
-            <div className={cardStyle} >
-                <Portfolio renderCard={activeCard === portfolioRef} renderCode={props.propObj.code} propObj={{setCardStyle}} />
-                <Blog renderCard={activeCard === blogRef} propObj={{setCardStyle}} />
-                <Code renderCard={activeCard === codeRef} propObj={{setCardStyle}} />
-                <At renderCard={activeCard === atRef} propObj={{setCardStyle}} />
+            <div className={cardStyle}>
+                <Page activeCard={activeCard} renderCode={props.propObj.code} cardStyle={{ setCardStyle }} />
             </div>
         </>
     );

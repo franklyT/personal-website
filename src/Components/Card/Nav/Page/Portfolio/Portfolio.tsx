@@ -5,18 +5,17 @@ import styles from './Portfolio.module.scss';
 
 function Portfolio(props: any) {
     useEffect(() => {
-        if (!props.renderCard) return;
-
-        props.renderCode ? props.propObj.setCardStyle(styles.codeStyle) : props.propObj.setCardStyle(styles.cardStyle);
-    }, [props.renderCard, props.renderCode, props.propObj]);
+        props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
+    }, [props.renderCard, props.renderCode, props.cardStyle]);
 
     function getCard() {
         return (
-            <div className={styles.masterDiv}>
+            <div className={styles.container}>
                 <div className={styles.meContainer}>
                     <h1 className={styles.meNameStyle}>
                         Francis Traina <span className={styles.meNameCaret} />
                     </h1>
+                    
                     <h2 className={styles.meTitleStyle}>
                         Web Developer
                     </h2>
@@ -27,21 +26,19 @@ function Portfolio(props: any) {
 
     function getCode() {
         return (
-            <div className={styles.masterDiv}>
+            <div className={styles.container}>
                 <SyntaxParser language={"jsx"} code={code.portfolioJSX} /> <SyntaxParser language={"scss"} code={code.portfolioSCSS} />
             </div>
         );
     }
 
-    function renderComponent() {
-        if (!props.renderCard) return;
-
+    function getCardOrCode() {
         return props.renderCode ? getCode() : getCard();
     }
 
     return (
         <>
-            {renderComponent()}
+            {getCardOrCode()}
         </>
     )
 }

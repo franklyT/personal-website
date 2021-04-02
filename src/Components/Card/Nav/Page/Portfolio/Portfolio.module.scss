@@ -1,5 +1,14 @@
 @import '../../../../../SCSS//animations';
 
+.container {
+    flex-basis: 100%;
+    padding-right: 10vw;
+    margin-right: -10vw;
+
+    transition: 1s;
+    position: relative;
+}
+
 .codeStyle {
     width: 50vw;
     background-color: rgb(47, 47, 47);
@@ -37,15 +46,6 @@
             max-height: 100vh;
         }
     }
-}
-
-.masterDiv {
-    flex-basis: 100%;
-    padding-right: 10vw;
-    margin-right: -10vw;
-
-    transition: 1s;
-    position: relative;
 }
 
 .meContainer {
