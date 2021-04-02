@@ -16,7 +16,9 @@ function Portfolio(props: any) {
         return (
             <div className={styles.masterDiv}>
                 <div className={styles.meContainer}>
-                    <h1 className={styles.meNameStyle}> Francis Traina <span className={styles.meNameCaret} /> </h1>
+                    <h1 className={styles.meNameStyle}>
+                        Francis Traina <span className={styles.meNameCaret} />
+                    </h1>
                     <h2 className={styles.meTitleStyle}>
                         Web Developer
                     </h2>

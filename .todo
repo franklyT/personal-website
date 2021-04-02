@@ -9,6 +9,9 @@ fix work card, maybe re-work it, or make it an explicit github link, including i
 refac contents into larger component
 
 
+
+type props
+
 grid-based card
 
 min portfolio photo, keep it in active memory with preloader
