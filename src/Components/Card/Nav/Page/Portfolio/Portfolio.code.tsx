@@ -9,8 +9,9 @@ import styles from './Portfolio.module.scss';
 
 function Portfolio(props: any) {
     useEffect(() => {
-        props.renderCard && props.propObj.setCardStyle(styles.cardStyle);
-        props.renderCode && props.propObj.setCardStyle(styles.codeStyle);
+        if (!props.renderCard) return;
+
+        props.renderCode ? props.propObj.setCardStyle(styles.codeStyle) : props.propObj.setCardStyle(styles.cardStyle);
     }, [props.renderCard, props.renderCode, props.propObj]);
 
     function getCard() {
@@ -50,7 +51,6 @@ function Portfolio(props: any) {
 }
 
 export default Portfolio;
-
 `,
 portfolioSCSS:
 /*css*/`
