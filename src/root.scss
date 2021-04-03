@@ -91,7 +91,7 @@ pre {
     height: 20px;
 
     &:hover {
-      background: transparent $inc-active no-repeat !important;
+      background-image: $inc-active;
     }
   }
 }
