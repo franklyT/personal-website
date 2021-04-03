@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import RenderedCard from '../../../static/shared/RenderedCard';
+import RenderedCard from '../../../static/shared/Enums/RenderedCard';
 
 import styles from './Nav.module.scss';
 

@@ -1,4 +1,4 @@
-import RenderedCard from '../../../../static/shared/RenderedCard';
+import RenderedCard from '../../../../static/shared/Enums/RenderedCard';
 
 import Portfolio from './Portfolio/Portfolio';
 import Blog from './Blog/Blog';
