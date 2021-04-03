@@ -1,9 +1,11 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import SyntaxParser from '../SyntaxParser/SyntaxParser';
 import code from './Portfolio.code';
 import styles from './Portfolio.module.scss';
 
 function Portfolio(props: any) {
+    const CardStyle = useContext(CardContext);
+
     useEffect(() => {
         props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
     }, [props.renderCard, props.renderCode, props.cardStyle]);

@@ -1,5 +1,4 @@
 const code = {
-    
 portfolioJSX:
 /*jsx*/`
 import { useEffect } from 'react';
@@ -52,6 +51,11 @@ function Portfolio(props: any) {
 
 export default Portfolio;
 `,
+
+portfolioJEST: 
+/*js*/`
+`,
+
 portfolioSCSS:
 /*css*/`
 // Portfolio.module.scss
