@@ -3,6 +3,9 @@
 $dec: url('./static/images/root/play-button-decrement.png');
 $dec-active: url('./static/images/root/play-button-decrement-active.png');
 
+$inc: url('./static/images/root/play-button-increment.png');
+$inc-active: url('./static/images/root/play-button-increment-active.png');
+
 @import './static/shared/SCSS/animations.scss'; // for now
 
 body {
@@ -81,14 +84,14 @@ pre {
   /* Right */
   &::-webkit-scrollbar-button:horizontal:increment
   {
-    background: transparent url('./static/images/root/play-button-increment.png') no-repeat;
+    background: transparent $inc no-repeat;
     background-size: 1.4em 1.4em;  
     background-position: center;
     width: 30px;
     height: 20px;
 
     &:hover {
-      // background: transparent url('./static/images/root/play-button-decrement.png') no-repeat !important;
+      background: transparent $inc-active no-repeat !important;
     }
   }
 }
