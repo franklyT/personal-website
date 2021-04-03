@@ -3,6 +3,8 @@
 $dec: url('./static/images/root/play-button-decrement.png');
 $dec-active: url('./static/images/root/play-button-decrement-active.png');
 
+@import './static/shared/SCSS/animations.scss'; // for now
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
