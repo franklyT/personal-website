@@ -7,11 +7,11 @@ function App() {
    return (
       <>
         <button
-          onClick={() => window.open("https://github.com/franklyT/", "_blank")}
-          className={`fa fa-github ${styles.mobileGithubIcon}`}
+          onClick={ () => window.open("https://github.com/franklyT/", "_blank") }
+          className={ `fa fa-github ${ styles.mobileGithubIcon }` }
         />
 
-        <div className={styles.container}>
+        <div className={ styles.container }>
           <Card />
         </div>
 

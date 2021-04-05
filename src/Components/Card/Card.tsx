@@ -1,11 +1,11 @@
 import {useState} from 'react';
+import { CardContextProvider } from './Card.context';
 
 import Nav from "./Nav/Nav";
 import Utils from "./Utils/Utils";
 
 import styles from './Card.module.scss';
 
-import { CardContextProvider } from './Card.context';
 import RenderedCard from "../../static/shared/Enums/RenderedCard";
 import Carets from "./Carets/Carets";
 import Page from "./Page/Page";
