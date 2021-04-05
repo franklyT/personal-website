@@ -1,6 +1,7 @@
-import styles from "./Utils.module.scss";
-import {useContext} from "react";
+import { useContext } from "react";
 import CardContext from "../Card.context";
+
+import styles from "./Utils.module.scss";
 
 function Utils() {
     const {code, setCode} = useContext(CardContext);

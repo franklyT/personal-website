@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
-import githubSplashIcon from "../../../../static/images/Card/githubSplash.jpg";
 import CardContext from "../../Card.context";
+
+import githubSplashIcon from "../../../../static/images/Card/githubSplash.jpg";
 
 import styles from "./Code.module.scss";
 
@@ -29,31 +30,31 @@ function Code() {
     );
 
     return (
-        <div className={styles.container} >
-            <div className={styles.grid}>
+        <div className={ styles.container } >
+            <div className={ styles.grid }>
                 {/* <div className={styles.title}> Work</div> */}
 
                 <img
-                    src={githubSplashIcon}
-                    onMouseEnter={() => setHoveredProject("githubSplash")}
+                    src={ githubSplashIcon }
+                    onMouseEnter={ () => setHoveredProject("githubSplash") }
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.gridImage
-                            : `${styles.gridImage} ${styles.gridImageInactive}`
+                            : `${ styles.gridImage } ${ styles.gridImageInactive }`
                     }
                     alt="Github Links"
-                    onClick={() => window.open("https://github.com/franklyT")}
+                    onClick={ () => window.open("https://github.com/franklyT") }
                 />
 
                 <div
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.projectDetailsBox
-                            : `${styles.projectDetailsBox} ${styles.projectDetailsBoxInactive}`
+                            : `${ styles.projectDetailsBox } ${ styles.projectDetailsBoxInactive }`
                     }
                 >
-                    <div className={styles.projectDetailsText}>
-                        {githubSplash}
+                    <div className={ styles.projectDetailsText }>
+                        { githubSplash }
                     </div>
                 </div>
             </div>

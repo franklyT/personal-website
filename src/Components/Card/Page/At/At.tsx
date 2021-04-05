@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './At.module.scss';
 import CardContext from "../../Card.context";
 

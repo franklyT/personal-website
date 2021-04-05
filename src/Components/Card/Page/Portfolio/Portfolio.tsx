@@ -5,7 +5,7 @@ import styles from './Portfolio.module.scss';
 import CardContext from "../../Card.context";
 
 function Portfolio() {
-    const {cardStyle, setCardStyle, code} = useContext(CardContext);
+    const { cardStyle, setCardStyle, code } = useContext(CardContext);
 
     useEffect(()=> {
         code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
@@ -13,13 +13,13 @@ function Portfolio() {
 
     function getCard() {
         return (
-            <div className={styles.container}>
-                <div className={styles.meContainer}>
-                    <h1 className={styles.meNameStyle}>
-                        Francis Traina <span className={styles.meNameCaret} />
+            <div className={ styles.container }>
+                <div className={ styles.meContainer }>
+                    <h1 className={ styles.meNameStyle }>
+                        Francis Traina <span className={ styles.meNameCaret } />
                     </h1>
                     
-                    <h2 className={styles.meTitleStyle}>
+                    <h2 className={ styles.meTitleStyle }>
                         Web Developer
                     </h2>
                 </div>

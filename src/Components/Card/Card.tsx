@@ -20,7 +20,7 @@ function Card() {
             <Nav />
             <Carets />
 
-            <div className={cardStyle}>
+            <div className={ cardStyle }>
                 <Page />
             </div>
 

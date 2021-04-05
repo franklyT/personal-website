@@ -1,4 +1,4 @@
-import {useContext, useEffect} from 'react';
+import { useContext, useEffect } from 'react';
 import styles from './Blog.module.scss';
 
 import Pages from './Pages/Pages';
@@ -13,7 +13,7 @@ function Blog() {
 
     // TODO: Endless scroll blog component, descending
     return (
-        <div className={styles.container} >
+        <div className={ styles.container } >
             <Pages />
         </div>
     );
