@@ -1,8 +1,9 @@
 import { useContext, useEffect } from 'react';
-import styles from './Blog.module.scss';
+import CardContext from "../../Card.context";
 
 import Pages from './Pages/Pages';
-import CardContext from "../../Card.context";
+
+import styles from './Blog.module.scss';
 
 function Blog() {
     const { cardStyle, setCardStyle, code } = useContext(CardContext);

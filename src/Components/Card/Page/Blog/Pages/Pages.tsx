@@ -1,5 +1,5 @@
 import * as PageIndex from "./Pages.index";
-import {Entry} from "./Entries/Interface/Entry";
+import { Entry } from "./Entries/Interface/Entry";
 
 function Pages() {
     const sanitizeDate = (date: string) => Number(date.replaceAll("/", ''));

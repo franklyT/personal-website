@@ -1,8 +1,10 @@
 import { useContext, useEffect } from 'react';
+import CardContext from "../../Card.context";
+
 import SyntaxParser from '../../../../static/shared/Components/SyntaxParser/SyntaxParser';
 import PortfolioCode from './Portfolio.code';
+
 import styles from './Portfolio.module.scss';
-import CardContext from "../../Card.context";
 
 function Portfolio() {
     const { cardStyle, setCardStyle, code } = useContext(CardContext);
@@ -29,8 +31,9 @@ function Portfolio() {
 
     function getCode() {
         return (
-            <div className={styles.container}>
-                <SyntaxParser language={"jsx"} code={PortfolioCode.portfolioJSX} /> <SyntaxParser language={"scss"} code={PortfolioCode.portfolioSCSS} />
+            <div className={ styles.container }>
+                <SyntaxParser language={ "jsx" } code={ PortfolioCode.portfolioJSX } />
+                <SyntaxParser language={ "scss" } code={ PortfolioCode.portfolioSCSS } />
             </div>
         );
     }
@@ -41,7 +44,7 @@ function Portfolio() {
 
     return (
         <>
-            {getCardOrCode()}
+            { getCardOrCode() }
         </>
     )
 }

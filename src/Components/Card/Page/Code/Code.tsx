@@ -32,7 +32,7 @@ function Code() {
     return (
         <div className={ styles.container } >
             <div className={ styles.grid }>
-                {/* <div className={styles.title}> Work</div> */}
+                {/* <div className={ styles.title }> Work</div> */}
 
                 <img
                     src={ githubSplashIcon }
