@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import RenderedCard from '../../../static/shared/Enums/RenderedCard';
 
 import styles from './Nav.module.scss';
 
-import Carets from "./Carets/Carets";
-import Page from "./Page/Page";
+import CardContext from "../Card.context";
 
-function Nav(props: any) {
-
-    const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
-    const [activeCard, setActiveCard] = useState(RenderedCard.portfolio);
+function Nav() {
+    const { activeCard, setActiveCard } = useContext(CardContext);
 
     return (
         <>
-            <div className={styles.iconContainerRow}>
+            <div className={ styles.iconContainerRow }>
                 {
                     [
                         { icon: "fa-user-circle", card: RenderedCard.portfolio },
@@ -28,12 +25,6 @@ function Nav(props: any) {
                                 />
                     })
                 }
-            </div>
-
-            <Carets parentState={{ activeCard }} parentProps={props.propObj.code} />
-
-            <div className={cardStyle}>
-                <Page activeCard={activeCard} renderCode={props.propObj.code} cardStyle={{ setCardStyle }} />
             </div>
         </>
     );

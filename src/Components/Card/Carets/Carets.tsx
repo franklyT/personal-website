@@ -1,12 +1,15 @@
-import { ReactElement } from 'react';
+import {ReactElement, useContext} from 'react';
 import styles from './Carets.module.scss';
+import CardContext from "../Card.context";
 
 // TODO: Refactor this entire concept... it's too dependent on media queries.
 
-function Carets(props: any) {
+function Carets() {
+    return (<div>CARET</div>)
+   /* const { activeCard, code} = useContext(CardContext);
+
     // Destructure refs
-    const { portfolioRef, blogRef, codeRef, atRef, activeCard } = props.parentState;
-    const code = props.parentProps;
+    // const { portfolioRef, blogRef, codeRef, atRef, activeCard } = props.parentState;
 
     return (
         <div className={styles.containerRow}>
@@ -30,6 +33,7 @@ function Carets(props: any) {
             }
         </div>
     );
+    */
 }
 
 export default Carets;

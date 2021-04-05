@@ -1,8 +1,7 @@
-import {createContext} from 'react'
+import { createContext } from 'react'
 
-const CardContext = createContext(null);
+const CardContext: any = createContext(null);
 
 export const CardContextProvider = CardContext.Provider
-export const CardContextConsumer = CardContext.Consumer
 
 export default CardContext;

@@ -1,5 +1,7 @@
 CURRENT FOCUS:
 
+maybe dont use crement button images
+
 keep refactoring "page" component, passing down through portfolio
 
 use context API to drill props

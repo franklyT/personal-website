@@ -12,11 +12,11 @@ body {
 
 /* Syntax Highlighter Styling */
 
-$dec: url("./static/images/root/play-button-decrement.png");
-$dec-active: url("./static/images/root/play-button-decrement-active.png");
+$dec: url("./static/images/SyntaxParser/play-button-decrement.png");
+$dec-active: url("./static/images/SyntaxParser/play-button-decrement-active.png");
 
-$inc: url("./static/images/root/play-button-increment.png");
-$inc-active: url("./static/images/root/play-button-increment-active.png");
+$inc: url("./static/images/SyntaxParser/play-button-increment.png");
+$inc-active: url("./static/images/SyntaxParser/play-button-increment-active.png");
 
 code {
   animation: fadeIn 1s;
@@ -66,9 +66,8 @@ pre {
     /* Left */
 
     &:horizontal:decrement {
-      background: transparent $dec no-repeat;
       background-size: 1em 1em;
-      background-position: left;
+      background: transparent no-repeat left;
       width: 30px;
       height: 20px;
 
@@ -80,9 +79,8 @@ pre {
     /* Right */
 
     &:horizontal:increment {
-      background: transparent $inc no-repeat;
       background-size: 1em 1em;
-      background-position: center;
+      background: transparent no-repeat center;
       width: 30px;
       height: 20px;
 

@@ -1,11 +1,15 @@
 import styles from "./Utils.module.scss";
+import {useContext} from "react";
+import CardContext from "../Card.context";
 
-function Utils(props: any) {
+function Utils() {
+    const {code, setCode} = useContext(CardContext);
+
     return(
         <div style={{textAlign: "center", marginLeft: "auto", marginRight: "auto"}}>
             <button
                 className={ `fa fa-code ${styles.iconStyle}` }
-                onClick={() => props.propObj.code ? props.propObj.setCode(false) : props.propObj.setCode(true)}
+                onClick={() => code ? setCode(false) : setCode(true)}
             />
         </div>
     )

@@ -1,14 +1,15 @@
 import { useContext, useEffect } from 'react';
-import SyntaxParser from '../SyntaxParser/SyntaxParser';
-import code from './Portfolio.code';
+import SyntaxParser from '../../../../static/shared/Components/SyntaxParser/SyntaxParser';
+import PortfolioCode from './Portfolio.code';
 import styles from './Portfolio.module.scss';
+import CardContext from "../../Card.context";
 
-function Portfolio(props: any) {
-    const CardStyle = useContext(CardContext);
+function Portfolio() {
+    const {cardStyle, setCardStyle, code} = useContext(CardContext);
 
-    useEffect(() => {
-        props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
-    }, [props.renderCard, props.renderCode, props.cardStyle]);
+    useEffect(()=> {
+        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
+    }, [code, cardStyle, setCardStyle]);
 
     function getCard() {
         return (
@@ -29,13 +30,13 @@ function Portfolio(props: any) {
     function getCode() {
         return (
             <div className={styles.container}>
-                <SyntaxParser language={"jsx"} code={code.portfolioJSX} /> <SyntaxParser language={"scss"} code={code.portfolioSCSS} />
+                <SyntaxParser language={"jsx"} code={PortfolioCode.portfolioJSX} /> <SyntaxParser language={"scss"} code={PortfolioCode.portfolioSCSS} />
             </div>
         );
     }
 
     function getCardOrCode() {
-        return props.renderCode ? getCode() : getCard();
+        return code ? getCode() : getCard();
     }
 
     return (

@@ -1,13 +1,17 @@
-import {useState, useEffect} from 'react';
-import styles from "./Code.module.scss";
-import TheresMore from "../../../../../static/images/Card/githubSplash.jpg";
+import { useState, useEffect, useContext } from 'react';
+import githubSplashIcon from "../../../../static/images/Card/githubSplash.jpg";
+import CardContext from "../../Card.context";
 
-function Code(props: any) {
+import styles from "./Code.module.scss";
+
+function Code() {
     const [hoveredProject, setHoveredProject] = useState('');
 
-        useEffect(() => {
-            props.renderCode ? props.cardStyle.setCardStyle(styles.codeStyle) : props.cardStyle.setCardStyle(styles.cardStyle);
-        }, [props.renderCode, props.cardStyle]);
+    const { cardStyle, setCardStyle, code } = useContext(CardContext);
+
+    useEffect(()=> {
+        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
+    }, [code, cardStyle, setCardStyle]);
 
     const githubSplash = (
         <>
@@ -30,7 +34,7 @@ function Code(props: any) {
                 {/* <div className={styles.title}> Work</div> */}
 
                 <img
-                    src={TheresMore}
+                    src={githubSplashIcon}
                     onMouseEnter={() => setHoveredProject("githubSplash")}
                     className={
                         hoveredProject === "githubSplash"
