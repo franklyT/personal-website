@@ -17,7 +17,7 @@ function Pages() {
 
                 <h2>
                     { getLongMonthDay(page.date) }
-                    <span> {page.time} </span>
+                    <span> { page.time } </span>
                 </h2>
 
                 { page.content }

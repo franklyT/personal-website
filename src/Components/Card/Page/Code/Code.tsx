@@ -17,7 +17,7 @@ function Code() {
     const githubSplash = (
         <>
             <br/>
-            -&gt; <a href="https://github.com" className={styles.linkGithub}> https://github.com </a> <br/>
+            -&gt; <a href="https://github.com" className={ styles.linkGithub }> https://github.com </a> <br/>
             <br/>
             Technologies:
 

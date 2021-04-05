@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { CardContextProvider } from './Card.context';
 
 import Nav from "./Nav/Nav";
