@@ -1,4 +1,4 @@
-import {Entry} from "./Interface/Entry";
+import { Entry } from "./Interface/Entry";
 
 export const shakespeare: Entry = {
     date: "03/28/21",

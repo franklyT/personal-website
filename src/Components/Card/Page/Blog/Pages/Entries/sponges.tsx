@@ -1,4 +1,4 @@
-import {Entry} from "./Interface/Entry";
+import { Entry } from "./Interface/Entry";
 
 export const sponges: Entry = {
     date: "03/29/21",

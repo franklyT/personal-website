@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext } from 'react';
 import RenderedCard from '../../../static/shared/Enums/RenderedCard';
 
 import styles from './Nav.module.scss';
@@ -17,11 +17,11 @@ function Nav() {
                         { icon: "fa-pencil-square-o", card: RenderedCard.blog },
                         { icon: "fa-github", card: RenderedCard.code },
                         { icon: "fa-at", card: RenderedCard.at }
-                    ].map((button: {icon: string, card: RenderedCard}, key: number) => {
+                    ].map((button: { icon: string, card: RenderedCard }, key: number) => {
                         return <button
-                                key={key}
-                                className={`fa ${button.icon} ${styles.iconStyle} ${activeCard === button.card && styles.iconStyleActive}`}
-                                onClick={() => setActiveCard(button.card)} 
+                                key={ key }
+                                className={ `fa ${ button.icon } ${ styles.iconStyle } ${ activeCard === button.card && styles.iconStyleActive }` }
+                                onClick={ () => setActiveCard(button.card) }
                                 />
                     })
                 }

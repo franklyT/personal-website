@@ -1,4 +1,4 @@
-import {Entry} from "./Interface/Entry";
+import { Entry } from "./Interface/Entry";
 
 export const dinosaurTimes: Entry = {
     date: "01/01/00",
