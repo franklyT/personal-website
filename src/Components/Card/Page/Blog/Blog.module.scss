@@ -1,19 +1,14 @@
 .cardStyle {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: 50vw;
     background-color: white;
-    top: 10vh;
     bottom: 10vh;
-
-    min-height: 30vh;
-
-    padding: 3vh 1vw 2vh 1.2vw;
-
+    display: flex;
     flex-basis: fit-content;
-
+    flex-wrap: wrap;
+    min-height: 30vh;
+    padding: 3vh 1vw 2vh 1.2vw;
+    top: 10vh;
     transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+    width: 50vw;
 }
 
 .codeStyle {
@@ -22,9 +17,8 @@
 
 .container {
     flex-basis: 100%;
-    padding-right: 10vw;
     margin-right: -10vw;
-
-    transition: 1s;
+    padding-right: 10vw;
     position: relative;
+    transition: 1s;
 }

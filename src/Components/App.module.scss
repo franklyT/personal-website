@@ -14,21 +14,19 @@
     display: none;
 
     @media (max-width: 600px) {
-        display: block;
-        text-align: center;
-        font-size: 7em;
-        border: none;
-        margin: auto;
-        height: 1.5em;
-        width: 1.5em;
-        background: rgba(255, 255, 255, 0);
-        color: rgba(255, 255, 255, .4);
-        outline: none;
-    
-        z-index: 1;
-
-        color: lime;
-        transition: color 2s;
         animation: glow 1s ease-in-out infinite alternate;
+        background: rgba(255, 255, 255, 0);
+        border: none;
+        color: lime;
+        color: rgba(255, 255, 255, .4);
+        display: block;
+        font-size: 7em;
+        height: 1.5em;
+        margin: auto;
+        outline: none;
+        text-align: center;
+        transition: color 2s;
+        width: 1.5em;
+        z-index: 1;
     }
 }

@@ -1,19 +1,14 @@
 .cardStyle {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: 100vw;
     background-color: white;
-    top: 10vh;
     bottom: 10vh;
-
-    min-height: 30vh;
-
-    padding: 3vh 1vw 2vh 1.2vw;
-
+    display: flex;
     flex-basis: fit-content;
-
+    flex-wrap: wrap;
+    min-height: 30vh;
+    padding: 3vh 1vw 2vh 1.2vw;
+    top: 10vh;
     transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+    width: 100vw;
 }
 
 .codeStyle {
@@ -22,24 +17,22 @@
 
 .container {
     flex-basis: 100%;
-    padding-right: 10vw;
     margin-right: -10vw;
-
-    transition: 1s;
+    padding-right: 10vw;
     position: relative;
+    transition: 1s;
 }
 
 .title {
-    margin-bottom: 0;
     font-size: 2.5vw;
+    margin-bottom: 0;
 }
 
 .subtitle {
-    margin-bottom: 0;
-    font-weight: 300;
-    font-size: 1.1vw;
-
     color: rgb(98, 98, 98);
+    font-size: 1.1vw;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 .input {
@@ -49,17 +42,13 @@
 }
 
 .inputBox {
-    display: inline-flex;
-
     background: rgba(240, 240, 240, 1);
-
-    margin-top: 3vh;
     border: none;
-
+    display: inline-flex;
     height: 4vh;
-    width: 23.8vw;
-
+    margin-top: 3vh;
     padding-left: .7vw;
+    width: 23.8vw;
 }
 
 .inputBoxName {
@@ -67,41 +56,31 @@
 }
 
 .inputBoxEmail {
-    // placeholder
     margin: 0;
-
     width: 47.3%;
 }
 
 .inputBoxSubject {
-    // Double width + margin-right
-    width: (48.3 + 1vw);
+    width: (48.3 + 1vw); // Double width + margin-right
 }
 
 .inputBoxVerify {
-    // Double width + margin-right
     margin-bottom: 1.5em;
     margin-top: -1.5em;
     width: 10em;
 }
 
 .textarea {
-    resize: none;
-
-    display: inline-flex;
-
-    // Double width + margin-right
-    width: (48.3 + 1vw);
-    height: 20vh;
-
     background: rgba(240, 240, 240, 1);
-
-    margin-top: 3vh;
-    margin-bottom: 3vh;
     border: none;
-
+    display: inline-flex;
+    height: 20vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
     padding-left: .7vw;
     padding-top: 1.5vh;
+    resize: none;
+    width: (48.3 + 1vw); // Double width + margin-right
 }
 
 .mrRoboto {
@@ -109,14 +88,13 @@
 }
 
 .submit {
-    border: none;
-    height: auto;
-    width: fit-content;
     background-color: rgb(21,21,21);
+    border: none;
     color: white;
     font-size: 2vh;
-
+    height: auto;
     padding: 0.7vh 0.3vw 0.7vh 0.5vw;
+    width: fit-content;
 
     &:active {
         background: rgba(50, 50, 50, 1);

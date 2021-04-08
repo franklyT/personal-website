@@ -1,19 +1,17 @@
 .containerRow {
-    margin-left: 10vw;
     display: flex;
     flex-direction: row;
+    margin-left: 10vw;
 }
 
 .caretStyle {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-
+    border-color: transparent transparent #ffffff transparent;
     border-style: solid;
     border-width: 0 2vw 2vw 2vw;
-    border-color: transparent transparent #ffffff transparent;
-
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
     z-index: -1;
 
     @media (min-width: 576px) {

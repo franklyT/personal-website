@@ -1,16 +1,15 @@
 .iconStyle {
-  position: relative;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  color: rgba(255, 255, 255, .4);
   display: flex;
-  margin-right: 3vw;
-  margin-top: 2vh;
   font-size: 3vw;
   height: 7vh;
-  width: 5vw;
-  border: none;
-  background: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, .4);
+  margin-right: 3vw;
+  margin-top: 2vh;
   outline: none;
-
+  position: relative;
+  width: 5vw;
   z-index: 1;
 
   &:hover {

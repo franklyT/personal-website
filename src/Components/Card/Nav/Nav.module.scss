@@ -1,41 +1,35 @@
 .defaultCardStyle {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: fit-content;
     background-color: white;
-    top: 10vh;
     bottom: 10vh;
-
-    min-height: 30vh;
-
-    padding: 3vh 1vw 2vh 1.2vw;
-
+    display: flex;
     flex-basis: fit-content;
-
-    transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+    flex-wrap: wrap;
+    min-height: 30vh;
+    padding: 3vh 1vw 2vh 1.2vw;
+    top: 10vh;
+    transition: width 0.3s ease-out; // note that we're transitioning transform, not height
+    width: fit-content;
 }
 
 .iconContainerRow {
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
     margin-right: auto;
     padding-left: 7vw;
-    display: flex;
-    flex-direction: row;
 }
 
 .iconStyle {
-    position: relative;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    color: rgba(255, 255, 255, .4);
     display: flex;
-    margin-right: 3vw;
     font-size: 3vw;
     height: 7vw;
-    width: 5vw;
-    border: none;
-    background: rgba(255, 255, 255, 0);
-    color: rgba(255, 255, 255, .4);
+    margin-right: 3vw;
     outline: none;
-
+    position: relative;
+    width: 5vw;
     z-index: 1;
     
     &:hover {
@@ -49,7 +43,7 @@
 }
 
 .iconStyleActive {
+    animation: glow 1s ease-in-out infinite alternate;
     color: lime;
     transition: color 0.5s;
-    animation: glow 1s ease-in-out infinite alternate;
 }

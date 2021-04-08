@@ -1,17 +1,12 @@
 .defaultCardStyle {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: fit-content;
     background-color: white;
-    top: 10vh;
     bottom: 10vh;
-
-    min-height: 30vh;
-
-    padding: 3vh 1vw 2vh 1.2vw;
-
+    display: flex;
     flex-basis: fit-content;
-
+    flex-wrap: wrap;
+    min-height: 30vh;
+    padding: 3vh 1vw 2vh 1.2vw;
+    top: 10vh;
     transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+    width: fit-content;
 }
