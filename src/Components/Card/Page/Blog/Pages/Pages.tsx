@@ -15,7 +15,7 @@ function Pages() {
                 return (
                     <div key={index}>
                         <h1> { entry.title } </h1>
-                        <h3> { entry.date } <span> { entry.time } </span> </h3>
+                        <h3> { getLongMonthDay(entry.date) } <span> { entry.time } </span> </h3>
 
                         <ReactMarkdown children={entry.markdown}/>
                     </div>
