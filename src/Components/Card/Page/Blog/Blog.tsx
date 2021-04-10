@@ -8,7 +8,7 @@ import styles from './Blog.module.scss';
 function Blog() {
     const { cardStyle, setCardStyle, code } = useContext(CardContext);
 
-    useEffect(()=> {
+    useEffect( ()=> {
         code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
     }, [code, cardStyle, setCardStyle]);
 
