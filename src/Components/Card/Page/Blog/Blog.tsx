@@ -31,7 +31,7 @@ function Blog() {
         return (
             <>
                 {Object.keys(pagesByYear).map((key, yearIndex: number) => {
-                        return <section key={yearIndex}>
+                        return <section key={yearIndex} style={{marginBottom: "1rem"}}>
                             <span>
                                 {key}
                             </span>
@@ -46,12 +46,8 @@ function Blog() {
                                     <p>
                                         {page.title}
                                     </p>
-
-                                    <br/>
-                                    <br/>
                                 </div>
                             })}
-                            <br/>
                         </section>
                     }
                 )}
