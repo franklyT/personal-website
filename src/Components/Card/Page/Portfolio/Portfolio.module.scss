@@ -12,18 +12,7 @@
 }
 
 .cardStyle {
-  animation: test 1s;
-  background-color: white;
-  bottom: 10vh;
-  display: flex;
-  flex-basis: fit-content;
-  flex-wrap: wrap;
-  min-height: 30vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  padding: 3vh 1vw 2vh 1.2vw;
-  top: 10vh;
-  transition: width 1s;
+  animation: test 1s, fadeIn 1s;
   width: 30vw;
 
   @keyframes test {
