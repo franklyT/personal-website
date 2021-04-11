@@ -19,8 +19,8 @@ export function Categories() {
 
                             <hr style={{borderTop: '4px solid lime'}}/>
 
-                            {pagesByYear[year].reverse().map((page: IPosts, pageIndex: number) => {
-                                return <Post key={pageIndex} propObj={{page}}/>
+                            {pagesByYear[year].reverse().map((post: IPosts, pageIndex: number) => {
+                                return <Post key={pageIndex} propObj={{post}}/>
                             })}
                         </section>
                     )
