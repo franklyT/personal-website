@@ -1,6 +1,6 @@
-import {IPosts} from "./Interface/IPosts";
+import {IPostData} from "./Interface/IPostData";
 
-export const tailwindCSS: IPosts = {
+export const tailwindCSS: IPostData = {
     date: '00/00/20',
     time: '00:00 AM',
     title: 'Why You Should Use Tailwind.css (And Why I Don\'t Believe That)',

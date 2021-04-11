@@ -1,6 +1,6 @@
-import {IPosts} from "./Interface/IPosts";
+import {IPostData} from "./Interface/IPostData";
 
-export const reactAndBeyond: IPosts = {
+export const reactAndBeyond: IPostData = {
     date: "04/06/21",
     time: "00:00 AM",
     title: "On React And Beyond",

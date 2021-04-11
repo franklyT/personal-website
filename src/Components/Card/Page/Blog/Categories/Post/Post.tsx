@@ -3,26 +3,26 @@ import ReactMarkdown from "react-markdown";
 import {getTruncatedMonthDay} from "../../../../../../static/shared/Helpers/Dates";
 
 import styles from './Post.module.scss';
-import {IPosts} from "./Posts/Interface/IPosts";
+import {IPostData} from "./Data/Interface/IPostData";
 
-export function Post(props: { propObj: { post: IPosts } }) {
+export function Post(props: { propObj: { post: IPostData } }) {
     const [showPost, setShowPost] = useState(false);
     const {post} = props.propObj;
 
     return (
         <div className={styles.container}>
             <div className={styles.flexContainer} onClick={() => setShowPost(!showPost)}>
-                <p className={styles.monthDay}>
+                <span className={styles.monthDay}>
                     {getTruncatedMonthDay(post.date)}
-                </p>
+                </span>
 
-                <p className={styles.title}>
+                <span className={styles.title}>
                     {post.title}
-                </p>
+                </span>
 
-                <p className={`${styles.chevron} ${showPost && styles.rotated}`}>
+                <span className={`${styles.chevron} ${showPost && styles.rotated}`}>
                     &gt;
-                </p>
+                </span>
             </div>
             <ReactMarkdown children={post.markdown} className={showPost ? "expand" : "collapse"}/>
         </div>

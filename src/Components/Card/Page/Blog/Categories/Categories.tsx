@@ -1,10 +1,11 @@
-import {IPosts} from "./Post/Posts/Interface/IPosts";
+import {IPostData} from "./Post/Data/Interface/IPostData";
 import Post from "./Post/Post";
-import * as PageIndex from "./Post/PostIndex";
+
+import * as PageIndex from './Post/Data/Indexer/index';
 
 export function Categories() {
-    let pagesByYear: Record<string, IPosts[]> = {};
-    Object.values(PageIndex).forEach((page: IPosts) => {
+    let pagesByYear: Record<string, IPostData[]> = {};
+    Object.values(PageIndex).forEach((page: IPostData) => {
         const PAGE_YEAR = page.date.substring(6, 8);
         pagesByYear["20" + PAGE_YEAR] = pagesByYear["20" + PAGE_YEAR] || [];
         pagesByYear["20" + PAGE_YEAR].push(page);
@@ -19,7 +20,7 @@ export function Categories() {
 
                             <hr style={{borderTop: '4px solid lime'}}/>
 
-                            {pagesByYear[year].reverse().map((post: IPosts, pageIndex: number) => {
+                            {pagesByYear[year].reverse().map((post: IPostData, pageIndex: number) => {
                                 return <Post key={pageIndex} propObj={{post}}/>
                             })}
                         </section>
