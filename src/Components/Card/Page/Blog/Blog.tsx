@@ -10,11 +10,11 @@ import styles from './Blog.module.scss';
 import {Entry} from "./Pages/Entries/Interface/Entry";
 
 function Blog() {
-    const {cardStyle, setCardStyle, code} = useContext(CardContext);
+    const {extendedCardStyle, setExtendedCardStyle, code} = useContext(CardContext);
 
     useEffect(() => {
-        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
-    }, [code, cardStyle, setCardStyle]);
+        code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
+    }, [code, extendedCardStyle, setExtendedCardStyle]);
 
     function pagesByYear() {
         let pagesByYear: Record<string, Entry[]> = {};

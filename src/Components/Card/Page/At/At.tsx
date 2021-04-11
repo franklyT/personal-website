@@ -4,7 +4,7 @@ import CardContext from "../../Card.context";
 import styles from './At.module.scss';
 
 function At() {
-    const {cardStyle, setCardStyle, code} = useContext(CardContext);
+    const {extendedCardStyle, setExtendedCardStyle, code} = useContext(CardContext);
 
     const [submitted, setSubmitted] = useState(false);
     const [verifyInput, setVerifyInput] = useState(0);
@@ -15,8 +15,8 @@ function At() {
     useEffect(() => setVerified(verifyInput === verifyNum1 + verifyNum2), [verifyInput, verifyNum1, verifyNum2]);
 
     useEffect(() => {
-        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
-    }, [code, cardStyle, setCardStyle]);
+        code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
+    }, [code, extendedCardStyle, setExtendedCardStyle]);
 
     // TODO: Improve verify check css
 

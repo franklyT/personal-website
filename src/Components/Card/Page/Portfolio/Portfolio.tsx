@@ -7,11 +7,11 @@ import PortfolioCode from './Portfolio.code';
 import styles from './Portfolio.module.scss';
 
 function Portfolio() {
-    const {cardStyle, setCardStyle, code} = useContext(CardContext);
+    const {code, extendedCardStyle, setExtendedCardStyle} = useContext(CardContext);
 
     useEffect(() => {
-        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
-    }, [code, cardStyle, setCardStyle]);
+        code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
+    }, [code, extendedCardStyle, setExtendedCardStyle]);
 
     function getCard() {
         return (

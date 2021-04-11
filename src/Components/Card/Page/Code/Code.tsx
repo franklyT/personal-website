@@ -8,11 +8,11 @@ import styles from "./Code.module.scss";
 function Code() {
     const [hoveredProject, setHoveredProject] = useState('');
 
-    const {cardStyle, setCardStyle, code} = useContext(CardContext);
+    const {extendedCardStyle, setExtendedCardStyle, code} = useContext(CardContext);
 
     useEffect(() => {
-        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
-    }, [code, cardStyle, setCardStyle]);
+        code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
+    }, [code, extendedCardStyle, setExtendedCardStyle]);
 
     const githubSplash = (
         <>

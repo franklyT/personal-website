@@ -13,14 +13,14 @@ import Page from "./Page/Page";
 function Card() {
     const [code, setCode] = useState(false);
     const [activeCard, setActiveCard] = useState(RenderedCard.portfolio);
-    const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
+    const [extendedCardStyle, setExtendedCardStyle] = useState(styles.baseCardStyle);
 
     return (
-        <CardContextProvider value={{setCode, code, activeCard, setActiveCard, cardStyle, setCardStyle}}>
+        <CardContextProvider value={{setCode, code, activeCard, setActiveCard, extendedCardStyle, setExtendedCardStyle}}>
             <Nav/>
             <Carets/>
 
-            <div className={cardStyle}>
+            <div className={`${styles.baseCardStyle} ${extendedCardStyle}`}>
                 <Page/>
             </div>
 
