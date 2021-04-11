@@ -17,6 +17,7 @@ maybe:
 reconsider use of enum
 grid-based card
 dont use crement button images
+pad zero for dates
 
 mostly done:
 keep refactoring "page" component, passing down through portfolio
