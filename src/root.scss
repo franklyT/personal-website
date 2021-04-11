@@ -14,10 +14,12 @@ body {
 
 .collapse {
   max-height: 0;
+  transition: max-height 0.5s;
 }
 
 .expand {
   max-height: 100em;
+  transition: max-height 0.5s;
 }
 
 /* Syntax Highlighter Styling */
