@@ -11,6 +11,8 @@ min portfolio photo, keep it in active memory with preloader
 
 -> (this might be critical due to the awkwardness of resizing) Fade in every card even when we go BACK to the original card FROM code using fadeIn mixin
 
+don't let github image overflow container
+
 maybe:
 reconsider use of enum
 grid-based card
