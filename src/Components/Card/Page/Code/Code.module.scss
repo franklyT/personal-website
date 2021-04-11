@@ -1,14 +1,14 @@
 .cardStyle {
-    background-color: white;
-    bottom: 10vh;
-    display: flex;
-    flex-basis: fit-content;
-    flex-wrap: wrap;
-    min-height: 30vh;
-    padding: 3vh 1vw 2vh 1.2vw;
-    top: 10vh;
-    transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
-    width: 50vw;
+  background-color: white;
+  bottom: 10vh;
+  display: flex;
+  flex-basis: fit-content;
+  flex-wrap: wrap;
+  min-height: 30vh;
+  padding: 3vh 1vw 2vh 1.2vw;
+  top: 10vh;
+  transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+  width: 50vw;
 }
 
 .codeStyle {
@@ -16,63 +16,63 @@
 }
 
 .container {
-    flex-basis: 100%;
-    margin-right: -10vw;
-    padding-right: 10vw;
-    position: relative;
-    transition: 1s;
+  flex-basis: 100%;
+  margin-right: -10vw;
+  padding-right: 10vw;
+  position: relative;
+  transition: 1s;
 }
 
 .grid {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .gridImage {
-    cursor: pointer;
-    display: flex;
-    height: 45vh;
-    margin-left: -1.2vw;
-    transition: 1s;
-    width: 52.2vw;
+  cursor: pointer;
+  display: flex;
+  height: 45vh;
+  margin-left: -1.2vw;
+  transition: 1s;
+  width: 52.2vw;
 }
 
 .gridImageInactive {
-    filter: grayscale(50);
-    transition: 1s;
+  filter: grayscale(50);
+  transition: 1s;
 }
 
 .title {
-    font-size: 3vw;
-    padding-bottom: 2vh;
-    padding-top: 0.4vh;
-    text-align: center;
+  font-size: 3vw;
+  padding-bottom: 2vh;
+  padding-top: 0.4vh;
+  text-align: center;
 }
 
 .projectDetailsBox {
-    background-color: rgb(21,21,21);
-    color: lime;
-    height: 31vh;
-    line-height: 2vh;
-    margin-left: -1.2vw;
-    margin-top: -.01vh; // Fixes flickering issue in Chrome
-    overflow: hidden;
-    transition: 1s;
-    width: 52.2vw;
+  background-color: rgb(21, 21, 21);
+  color: lime;
+  height: 31vh;
+  line-height: 2vh;
+  margin-left: -1.2vw;
+  margin-top: -.01vh; // Fixes flickering issue in Chrome
+  overflow: hidden;
+  transition: 1s;
+  width: 52.2vw;
 }
 
 .projectDetailsBoxInactive {
-    height: 0;
-    transition: 1s;
+  height: 0;
+  transition: 1s;
 }
 
 .projectDetailsText {
-    font-size: .7vw;
-    padding: 1vh 1vw 1vh 1vw;
+  font-size: .7vw;
+  padding: 1vh 1vw 1vh 1vw;
 }
 
 .linkGithub {
-    color: rgb(60, 170, 255);
+  color: rgb(60, 170, 255);
 }

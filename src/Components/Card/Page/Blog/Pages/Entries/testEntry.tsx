@@ -1,4 +1,4 @@
-import { Entry } from "./Interface/Entry";
+import {Entry} from "./Interface/Entry";
 
 export const testEntry: Entry = {
     date: "04/06/21",

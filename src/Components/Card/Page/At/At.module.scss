@@ -1,14 +1,14 @@
 .cardStyle {
-    background-color: white;
-    bottom: 10vh;
-    display: flex;
-    flex-basis: fit-content;
-    flex-wrap: wrap;
-    min-height: 30vh;
-    padding: 3vh 1vw 2vh 1.2vw;
-    top: 10vh;
-    transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
-    width: 100vw;
+  background-color: white;
+  bottom: 10vh;
+  display: flex;
+  flex-basis: fit-content;
+  flex-wrap: wrap;
+  min-height: 30vh;
+  padding: 3vh 1vw 2vh 1.2vw;
+  top: 10vh;
+  transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
+  width: 100vw;
 }
 
 .codeStyle {
@@ -16,100 +16,100 @@
 }
 
 .container {
-    flex-basis: 100%;
-    margin-right: -10vw;
-    padding-right: 10vw;
-    position: relative;
-    transition: 1s;
+  flex-basis: 100%;
+  margin-right: -10vw;
+  padding-right: 10vw;
+  position: relative;
+  transition: 1s;
 }
 
 .title {
-    font-size: 2.5vw;
-    margin-bottom: 0;
+  font-size: 2.5vw;
+  margin-bottom: 0;
 }
 
 .subtitle {
-    color: rgb(98, 98, 98);
-    font-size: 1.1vw;
-    font-weight: 300;
-    margin-bottom: 0;
+  color: rgb(98, 98, 98);
+  font-size: 1.1vw;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
 .input {
-    &:focus::placeholder {
-        color: transparent;
-    }
+  &:focus::placeholder {
+    color: transparent;
+  }
 }
 
 .inputBox {
-    background: rgba(240, 240, 240, 1);
-    border: none;
-    display: inline-flex;
-    height: 4vh;
-    margin-top: 3vh;
-    padding-left: .7vw;
-    width: 23.8vw;
+  background: rgba(240, 240, 240, 1);
+  border: none;
+  display: inline-flex;
+  height: 4vh;
+  margin-top: 3vh;
+  padding-left: .7vw;
+  width: 23.8vw;
 }
 
 .inputBoxName {
-    margin-right: 1vw;
+  margin-right: 1vw;
 }
 
 .inputBoxEmail {
-    margin: 0;
-    width: 47.3%;
+  margin: 0;
+  width: 47.3%;
 }
 
 .inputBoxSubject {
-    width: (48.3 + 1vw); // Double width + margin-right
+  width: (48.3 + 1vw); // Double width + margin-right
 }
 
 .inputBoxVerify {
-    margin-bottom: 1.5em;
-    margin-top: -1.5em;
-    width: 10em;
+  margin-bottom: 1.5em;
+  margin-top: -1.5em;
+  width: 10em;
 }
 
 .textarea {
-    background: rgba(240, 240, 240, 1);
-    border: none;
-    display: inline-flex;
-    height: 20vh;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-    padding-left: .7vw;
-    padding-top: 1.5vh;
-    resize: none;
-    width: (48.3 + 1vw); // Double width + margin-right
+  background: rgba(240, 240, 240, 1);
+  border: none;
+  display: inline-flex;
+  height: 20vh;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  padding-left: .7vw;
+  padding-top: 1.5vh;
+  resize: none;
+  width: (48.3 + 1vw); // Double width + margin-right
 }
 
 .mrRoboto {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .submit {
-    background-color: rgb(21,21,21);
-    border: none;
-    color: white;
-    font-size: 2vh;
-    height: auto;
-    padding: 0.7vh 0.3vw 0.7vh 0.5vw;
-    width: fit-content;
+  background-color: rgb(21, 21, 21);
+  border: none;
+  color: white;
+  font-size: 2vh;
+  height: auto;
+  padding: 0.7vh 0.3vw 0.7vh 0.5vw;
+  width: fit-content;
 
-    &:active {
-        background: rgba(50, 50, 50, 1);
-    }
+  &:active {
+    background: rgba(50, 50, 50, 1);
+  }
 
-    &:focus {
-        outline: 0
-    }
+  &:focus {
+    outline: 0
+  }
 
-    &:hover {
-        background: rgba(0, 0, 0, .8);
-        cursor: pointer;
-    }
+  &:hover {
+    background: rgba(0, 0, 0, .8);
+    cursor: pointer;
+  }
 }
 
 .linkGithub {
-    color: rgb(60, 170, 255);
+  color: rgb(60, 170, 255);
 }

@@ -1,34 +1,34 @@
 // TODO: Resize footer.
 
 .container {
-    color: white;
-    margin-top: 1.5em;
-    text-align: center;
+  color: white;
+  margin-top: 1.5em;
+  text-align: center;
 }
 
 .me {
-    color: lime;
-    font-size: 0.8em;
-    font-style: italic;
-    transition: color 2s;
-    // text-shadow: 0 0 10px #fff, 0 0 7.5px #0b2dc4, 0 0 10px #0b2dc4;
+  color: lime;
+  font-size: 0.8em;
+  font-style: italic;
+  transition: color 2s;
+  // text-shadow: 0 0 10px #fff, 0 0 7.5px #0b2dc4, 0 0 10px #0b2dc4;
 }
 
 .icon {
-    height: 3vh;
-    margin-right: 0.2em;
-    margin-top: 0.5em;
-    width: 2vw;
+  height: 3vh;
+  margin-right: 0.2em;
+  margin-top: 0.5em;
+  width: 2vw;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .break {
-    height: 4em;
+  height: 4em;
 
-    @media only screen and (max-width: 600px) {
-        display: none;
-    }
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 }

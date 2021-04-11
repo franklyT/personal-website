@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { CardContextProvider } from './Card.context';
+import {useState} from 'react';
+import {CardContextProvider} from './Card.context';
 
 import Nav from "./Nav/Nav";
 import Utils from "./Utils/Utils";
@@ -16,15 +16,15 @@ function Card() {
     const [cardStyle, setCardStyle] = useState(styles.defaultCardStyle);
 
     return (
-        <CardContextProvider value={ { setCode, code, activeCard, setActiveCard, cardStyle, setCardStyle } } >
-            <Nav />
-            <Carets />
+        <CardContextProvider value={{setCode, code, activeCard, setActiveCard, cardStyle, setCardStyle}}>
+            <Nav/>
+            <Carets/>
 
-            <div className={ cardStyle }>
-                <Page />
+            <div className={cardStyle}>
+                <Page/>
             </div>
 
-            <Utils />
+            <Utils/>
         </CardContextProvider>
     );
 }

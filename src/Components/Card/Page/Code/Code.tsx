@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import {useState, useEffect, useContext} from 'react';
 import CardContext from "../../Card.context";
 
 import githubSplashIcon from "../../../../static/images/Card/githubSplash.jpg";
@@ -8,16 +8,16 @@ import styles from "./Code.module.scss";
 function Code() {
     const [hoveredProject, setHoveredProject] = useState('');
 
-    const { cardStyle, setCardStyle, code } = useContext(CardContext);
+    const {cardStyle, setCardStyle, code} = useContext(CardContext);
 
-    useEffect(()=> {
+    useEffect(() => {
         code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
     }, [code, cardStyle, setCardStyle]);
 
     const githubSplash = (
         <>
             <br/>
-            -&gt; <a href="https://github.com" className={ styles.linkGithub }> https://github.com </a> <br/>
+            -&gt; <a href="https://github.com" className={styles.linkGithub}> https://github.com </a> <br/>
             <br/>
             Technologies:
 
@@ -30,31 +30,31 @@ function Code() {
     );
 
     return (
-        <div className={ styles.container } >
-            <div className={ styles.grid }>
+        <div className={styles.container}>
+            <div className={styles.grid}>
                 {/* <div className={ styles.title }> Work</div> */}
 
                 <img
-                    src={ githubSplashIcon }
-                    onMouseEnter={ () => setHoveredProject("githubSplash") }
+                    src={githubSplashIcon}
+                    onMouseEnter={() => setHoveredProject("githubSplash")}
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.gridImage
-                            : `${ styles.gridImage } ${ styles.gridImageInactive }`
+                            : `${styles.gridImage} ${styles.gridImageInactive}`
                     }
                     alt="Github Links"
-                    onClick={ () => window.open("https://github.com/franklyT") }
+                    onClick={() => window.open("https://github.com/franklyT")}
                 />
 
                 <div
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.projectDetailsBox
-                            : `${ styles.projectDetailsBox } ${ styles.projectDetailsBoxInactive }`
+                            : `${styles.projectDetailsBox} ${styles.projectDetailsBoxInactive}`
                     }
                 >
-                    <div className={ styles.projectDetailsText }>
-                        { githubSplash }
+                    <div className={styles.projectDetailsText}>
+                        {githubSplash}
                     </div>
                 </div>
             </div>

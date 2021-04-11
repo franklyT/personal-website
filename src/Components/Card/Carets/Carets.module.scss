@@ -1,48 +1,48 @@
 .containerRow {
-    display: flex;
-    flex-direction: row;
-    margin-left: 10vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10vw;
 }
 
 .caretStyle {
-    border-color: transparent transparent #ffffff transparent;
-    border-style: solid;
-    border-width: 0 2vw 2vw 2vw;
-    display: block;
-    height: 0;
-    position: absolute;
-    width: 0;
-    z-index: -1;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: solid;
+  border-width: 0 2vw 2vw 2vw;
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: -1;
 
-    @media (min-width: 576px) {
-        top: 17.5vh;
-    }
+  @media (min-width: 576px) {
+    top: 17.5vh;
+  }
 
-    @media (min-width: 768px) {
-        top: 13.8vh;
-    }
+  @media (min-width: 768px) {
+    top: 13.8vh;
+  }
 
-    @media (min-width: 1200px) {
-        top: 21vh;
-    }
+  @media (min-width: 1200px) {
+    top: 21vh;
+  }
 }
 
 .caretStylePortfolio {
-    margin-left: 1.8vw;
-    transition: height 0.5s;
+  margin-left: 1.8vw;
+  transition: height 0.5s;
 }
 
 .caretStyleBlog {
-    margin-left: 9.6vw;
-    transition: height 0.5s;
+  margin-left: 9.6vw;
+  transition: height 0.5s;
 }
 
 .caretStyleCode {
-    margin-left: 17.95vw;
-    transition: height 0.5s;
+  margin-left: 17.95vw;
+  transition: height 0.5s;
 }
 
 .caretStyleAt {
-    margin-left: 25.6vw;
-    transition: height 0.5s, opacity 0s;
+  margin-left: 25.6vw;
+  transition: height 0.5s, opacity 0s;
 }

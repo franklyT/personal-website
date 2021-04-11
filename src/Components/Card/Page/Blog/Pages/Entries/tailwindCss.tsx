@@ -1,4 +1,4 @@
-import { Entry } from "./Interface/Entry";
+import {Entry} from "./Interface/Entry";
 
 export const tailwindCSS: Entry = {
     date: '00/00/20',

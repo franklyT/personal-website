@@ -2,15 +2,15 @@ import {useContext, useEffect} from 'react';
 import CardContext from "../../Card.context";
 
 import Pages from './Pages/Pages';
-import {sanitizeDate, getLongMonthDay} from "../../../../static/shared/Helper/Dates";
+import {sanitizeDate, getLongMonthDay} from "../../../../static/shared/Helpers/Dates";
 
 import * as PageIndex from "./Pages/Pages.index";
 
 import styles from './Blog.module.scss';
-import { Entry } from "./Pages/Entries/Interface/Entry";
+import {Entry} from "./Pages/Entries/Interface/Entry";
 
 function Blog() {
-    const { cardStyle, setCardStyle, code } = useContext(CardContext);
+    const {cardStyle, setCardStyle, code} = useContext(CardContext);
 
     useEffect(() => {
         code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
@@ -30,27 +30,27 @@ function Blog() {
         // extract to component
         return (
             <>
-                { Object.keys(pagesByYear).map((key, index) => {
-                        return <div key={ index }>
-                            { key }
+                {Object.keys(pagesByYear).map((key, index) => {
+                        return <div key={index}>
+                            {key}
                             <hr/>
-                            { pagesByYear[key].map((page: Entry) => {
+                            {pagesByYear[key].map((page: Entry) => {
                                 return <>
-                                    { getLongMonthDay(page.date) } { page.title }
+                                    {getLongMonthDay(page.date)} {page.title}
                                     <br/>
                                     <br/>
                                 </>
                             })}
                         </div>
                     }
-                ) }
+                )}
             </>
         )
     }
 
     return (
-        <div className={ styles.container }>
-            { pagesByYear() }
+        <div className={styles.container}>
+            {pagesByYear()}
         </div>
     );
 }

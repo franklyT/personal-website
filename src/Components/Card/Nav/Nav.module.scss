@@ -1,49 +1,49 @@
 .defaultCardStyle {
-    background-color: white;
-    bottom: 10vh;
-    display: flex;
-    flex-basis: fit-content;
-    flex-wrap: wrap;
-    min-height: 30vh;
-    padding: 3vh 1vw 2vh 1.2vw;
-    top: 10vh;
-    transition: width 0.3s ease-out; // note that we're transitioning transform, not height
-    width: fit-content;
+  background-color: white;
+  bottom: 10vh;
+  display: flex;
+  flex-basis: fit-content;
+  flex-wrap: wrap;
+  min-height: 30vh;
+  padding: 3vh 1vw 2vh 1.2vw;
+  top: 10vh;
+  transition: width 0.3s ease-out; // note that we're transitioning transform, not height
+  width: fit-content;
 }
 
 .iconContainerRow {
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 7vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 7vw;
 }
 
 .iconStyle {
-    background: rgba(255, 255, 255, 0);
-    border: none;
-    color: rgba(255, 255, 255, .4);
-    display: flex;
-    font-size: 3vw;
-    height: 7vw;
-    margin-right: 3vw;
-    outline: none;
-    position: relative;
-    width: 5vw;
-    z-index: 1;
-    
-    &:hover {
-        color: lime;
-        transition: color 0.5s;
-    }
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  color: rgba(255, 255, 255, .4);
+  display: flex;
+  font-size: 3vw;
+  height: 7vw;
+  margin-right: 3vw;
+  outline: none;
+  position: relative;
+  width: 5vw;
+  z-index: 1;
 
-    &:before { // Accesses the font-awesome pseudo-selector
-        cursor: pointer;
-    }
+  &:hover {
+    color: lime;
+    transition: color 0.5s;
+  }
+
+  &:before { // Accesses the font-awesome pseudo-selector
+    cursor: pointer;
+  }
 }
 
 .iconStyleActive {
-    animation: glow 1s ease-in-out infinite alternate;
-    color: lime;
-    transition: color 0.5s;
+  animation: glow 1s ease-in-out infinite alternate;
+  color: lime;
+  transition: color 0.5s;
 }

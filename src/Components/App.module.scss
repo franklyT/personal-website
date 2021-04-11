@@ -1,32 +1,32 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-top: 10vh;
 
-    @media (max-width: 600px) {
-        display: none;
-    }
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .mobileGithubIcon {
-    display: none;
+  display: none;
 
-    @media (max-width: 600px) {
-        animation: glow 1s ease-in-out infinite alternate;
-        background: rgba(255, 255, 255, 0);
-        border: none;
-        color: lime;
-        color: rgba(255, 255, 255, .4);
-        display: block;
-        font-size: 7em;
-        height: 1.5em;
-        margin: auto;
-        outline: none;
-        text-align: center;
-        transition: color 2s;
-        width: 1.5em;
-        z-index: 1;
-    }
+  @media (max-width: 600px) {
+    animation: glow 1s ease-in-out infinite alternate;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    color: lime;
+    color: rgba(255, 255, 255, .4);
+    display: block;
+    font-size: 7em;
+    height: 1.5em;
+    margin: auto;
+    outline: none;
+    text-align: center;
+    transition: color 2s;
+    width: 1.5em;
+    z-index: 1;
+  }
 }
