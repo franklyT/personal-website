@@ -9,4 +9,5 @@
   top: 10vh;
   transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
   width: fit-content;
+  overflow: hidden;
 }

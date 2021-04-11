@@ -1,0 +1,33 @@
+.container {
+  overflow: hidden;
+}
+
+.flexContainer {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.monthDay {
+  color: gray;
+  font-size: 0.75rem;
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+.title {
+  max-width: 70%;
+}
+
+.chevron {
+  font-size: 1.5rem;
+  justify-self: end;
+  margin-left: auto;
+  transition: transform 0.3s;
+  user-select: none;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
