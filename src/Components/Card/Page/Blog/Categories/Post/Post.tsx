@@ -7,7 +7,8 @@ export function Post(props: any) {
     const {page} = props.propObj;
 
     return (
-        <div style={{overflowY: "hidden"}} onClick={() => isPostRendered ? setIsPostRendered(false) : setIsPostRendered(true)}>
+        <div style={{overflowY: "hidden"}}
+             onClick={() => isPostRendered ? setIsPostRendered(false) : setIsPostRendered(true)}>
             <div style={{display: 'flex', flexDirection: "row", alignItems: "center"}}>
                 <p style={{fontSize: '0.75rem', color: "gray", marginRight: "2rem", whiteSpace: "nowrap"}}>
                     {getTruncatedMonthDay(page.date)}
