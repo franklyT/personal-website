@@ -10,8 +10,7 @@ export function Post(props: any) {
 
     return (
         <div className={styles.container}>
-            <div className={styles.flexContainer}
-                 onClick={() => isPostRendered ? setIsPostRendered(false) : setIsPostRendered(true)}>
+            <div className={styles.flexContainer} onClick={() => setIsPostRendered(!isPostRendered)}>
                 <p className={styles.monthDay}>
                     {getTruncatedMonthDay(page.date)}
                 </p>
