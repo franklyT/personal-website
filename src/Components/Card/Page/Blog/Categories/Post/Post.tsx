@@ -5,12 +5,12 @@ import {getTruncatedMonthDay} from "../../../../../../static/shared/Helpers/Date
 import styles from './Post.module.scss';
 
 export function Post(props: any) {
-    const [isPostRendered, setIsPostRendered] = useState(false);
+    const [showPost, setShowPost] = useState(false);
     const {page} = props.propObj;
 
     return (
         <div className={styles.container}>
-            <div className={styles.flexContainer} onClick={() => setIsPostRendered(!isPostRendered)}>
+            <div className={styles.flexContainer} onClick={() => setShowPost(!showPost)}>
                 <p className={styles.monthDay}>
                     {getTruncatedMonthDay(page.date)}
                 </p>
@@ -19,11 +19,11 @@ export function Post(props: any) {
                     {page.title}
                 </p>
 
-                <p className={`${styles.chevron} ${isPostRendered ? styles.rotated : ''}`} >
+                <p className={`${styles.chevron} ${showPost ? styles.rotated : ''}`}>
                     &gt;
                 </p>
             </div>
-            <ReactMarkdown children={page.markdown} className={isPostRendered ? "expand" : "collapse"}/>
+            <ReactMarkdown children={page.markdown} className={showPost ? "expand" : "collapse"}/>
         </div>
     )
 }
