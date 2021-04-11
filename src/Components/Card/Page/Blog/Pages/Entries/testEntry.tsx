@@ -1,9 +1,9 @@
 import { Entry } from "./Interface/Entry";
 
-export const reactAndBeyond: Entry = {
+export const testEntry: Entry = {
     date: "04/06/21",
     time: "00:00 AM",
-    title: "On React And Beyond",
+    title: "Test Entry",
     markdown: `
-So why React?`
+Test entry.`
 }
