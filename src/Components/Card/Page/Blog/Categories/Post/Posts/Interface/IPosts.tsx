@@ -1,4 +1,4 @@
-export interface Entry {
+export interface IPosts {
     date: string;
     time: string;
     title: string;

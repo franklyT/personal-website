@@ -10,6 +10,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Helper */
+
+.collapse {
+  max-height: 0;
+}
+
+.expand {
+  max-height: 100em;
+}
+
 /* Syntax Highlighter Styling */
 
 $dec: url("./static/images/SyntaxParser/play-button-decrement.png");

@@ -1,6 +1,6 @@
-import {Entry} from "./Interface/Entry";
+import {IPosts} from "./Interface/IPosts";
 
-export const reactAndBeyond: Entry = {
+export const reactAndBeyond: IPosts = {
     date: "04/06/21",
     time: "00:00 AM",
     title: "On React And Beyond",
