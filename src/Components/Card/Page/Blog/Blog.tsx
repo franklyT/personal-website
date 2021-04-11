@@ -21,23 +21,21 @@ function Blog() {
 
         Object.values(PageIndex).forEach((page: Entry) => {
             const PAGE_YEAR = page.date.substring(6, 8);
-
             pagesByYear["20" + PAGE_YEAR] = pagesByYear["20" + PAGE_YEAR] || [];
-
             pagesByYear["20" + PAGE_YEAR].push(page);
         });
 
         // extract to component
         return (
             <>
-                {Object.keys(pagesByYear).map((key, yearIndex: number) => {
+                {Object.keys(pagesByYear).reverse().map((key, yearIndex: number) => {
                         return <section key={yearIndex} style={{marginBottom: "1rem"}}>
                             <span>
                                 {key}
                             </span>
 
                             <hr style={{borderTop: '4px solid lime'}}/>
-                            {pagesByYear[key].map((page: Entry, pageIndex: number) => {
+                            {pagesByYear[key].reverse().map((page: Entry, pageIndex: number) => {
                                 return <div style={{display: 'flex', flexDirection: "row", alignItems: "center"}} key={pageIndex}>
                                     <p style={{fontSize: '0.75rem', color: "gray", marginRight: "2rem", whiteSpace: "nowrap"}}>
                                         {getTruncatedMonthDay(page.date)}
