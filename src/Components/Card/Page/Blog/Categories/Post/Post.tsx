@@ -19,7 +19,7 @@ export function Post(props: any) {
                     {page.title}
                 </p>
 
-                <p className={`${styles.chevron} ${showPost ? styles.rotated : ''}`}>
+                <p className={`${styles.chevron} ${showPost && styles.rotated}`}>
                     &gt;
                 </p>
             </div>
