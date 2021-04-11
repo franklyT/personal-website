@@ -9,7 +9,7 @@ fix work card, maybe re-work it, or make it an explicit github link, including i
 
 min portfolio photo, keep it in active memory with preloader
 
-Fade in every card even when we go BACK to the original card FROM code using fadeIn mixin
+-> (this might be critical due to the awkwardness of resizing) Fade in every card even when we go BACK to the original card FROM code using fadeIn mixin
 
 maybe:
 reconsider use of enum

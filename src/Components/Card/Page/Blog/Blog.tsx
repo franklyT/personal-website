@@ -2,7 +2,7 @@ import {useContext, useEffect} from 'react';
 import CardContext from "../../Card.context";
 
 import Pages from './Pages/Pages';
-import {sanitizeDate, getLongMonthDay} from "../../../../static/shared/Helpers/Dates";
+import {sanitizeDate, getTruncatedMonthDay} from "../../../../static/shared/Helpers/Dates";
 
 import * as PageIndex from "./Pages/Pages.index";
 
@@ -31,17 +31,26 @@ function Blog() {
         return (
             <>
                 {Object.keys(pagesByYear).map((key, index) => {
-                        return <div key={index}>
+                        return <section>
+                            <div key={index}>
                             {key}
-                            <hr/>
+                            <hr style={{borderTop: '4px solid lime'}}/>
                             {pagesByYear[key].map((page: Entry) => {
-                                return <>
-                                    {getLongMonthDay(page.date)} {page.title}
+                                return <div style={{display: 'flex', flexDirection: "row", alignItems: "center"}}>
+                                    <p style={{fontSize: '0.75rem', color: "gray", marginRight: "2rem", whiteSpace: "nowrap"}}>
+                                        {getTruncatedMonthDay(page.date)}
+                                    </p>
+
+                                    <p>
+                                        {page.title}
+                                    </p>
+
                                     <br/>
                                     <br/>
-                                </>
+                                </div>
                             })}
                         </div>
+                        </section>
                     }
                 )}
             </>
