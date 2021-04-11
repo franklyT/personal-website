@@ -30,13 +30,15 @@ function Blog() {
         // extract to component
         return (
             <>
-                {Object.keys(pagesByYear).map((key, index) => {
-                        return <section>
-                            <div key={index}>
-                            {key}
+                {Object.keys(pagesByYear).map((key, yearIndex: number) => {
+                        return <section key={yearIndex}>
+                            <span>
+                                {key}
+                            </span>
+
                             <hr style={{borderTop: '4px solid lime'}}/>
-                            {pagesByYear[key].map((page: Entry) => {
-                                return <div style={{display: 'flex', flexDirection: "row", alignItems: "center"}}>
+                            {pagesByYear[key].map((page: Entry, pageIndex: number) => {
+                                return <div style={{display: 'flex', flexDirection: "row", alignItems: "center"}} key={pageIndex}>
                                     <p style={{fontSize: '0.75rem', color: "gray", marginRight: "2rem", whiteSpace: "nowrap"}}>
                                         {getTruncatedMonthDay(page.date)}
                                     </p>
@@ -49,7 +51,7 @@ function Blog() {
                                     <br/>
                                 </div>
                             })}
-                        </div>
+                            <br/>
                         </section>
                     }
                 )}
