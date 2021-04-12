@@ -5,7 +5,7 @@ import CardContext from "../Card.context";
 // TODO: Refactor this entire concept... it's too dependent on media queries.
 
 function Carets() {
-    return (<div>CARET</div>)
+    return (<div></div>)
     /* const { activeCard, code} = useContext(CardContext);
 
      // Destructure refs
