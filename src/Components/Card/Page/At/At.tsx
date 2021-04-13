@@ -3,13 +3,11 @@ import CardContext from "../../Card.context";
 
 import styles from './At.module.scss';
 import SyntaxParser from "../../../../static/shared/Components/SyntaxParser/SyntaxParser";
-import BlogCode from "../Blog/Blog.code";
-import Categories from "../Blog/Categories/Categories";
 import AtCode from "./At.code";
 import Utils from "../Utils/Utils";
 
 function At() {
-    const {extendedCardStyle, setExtendedCardStyle, code, setCode} = useContext(CardContext);
+    const {extendedCardStyle, setExtendedCardStyle, code} = useContext(CardContext);
 
     const [submitted, setSubmitted] = useState(false);
     const [verifyInput, setVerifyInput] = useState(0);

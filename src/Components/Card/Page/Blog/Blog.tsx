@@ -8,7 +8,7 @@ import SyntaxParser from "../../../../static/shared/Components/SyntaxParser/Synt
 import BlogCode from "./Blog.code";
 
 function Blog() {
-    const {extendedCardStyle, setExtendedCardStyle, code, setCode} = useContext(CardContext);
+    const {extendedCardStyle, setExtendedCardStyle, code} = useContext(CardContext);
 
     useEffect(() => {
         code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
