@@ -10,5 +10,9 @@
 .container {
   width: 100%;
   height: 100%;
+
+  section {
+    height: max-content;
+  }
 }
 

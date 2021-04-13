@@ -1,5 +1,6 @@
 .container {
   overflow: hidden;
+  height: fit-content;
 }
 
 .flexContainer {
@@ -42,6 +43,7 @@
   font-family: Verdana;
   font-size: 1.2rem;
   color: lime;
+  height: fit-content;
 
   h1 {
     font-family: "Press Start 2P", cursive;
