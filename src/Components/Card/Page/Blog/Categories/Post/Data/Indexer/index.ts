@@ -1,3 +1,4 @@
 export * from '../tailwindCss';
-export * from '../reactAndBeyond';
-export * from '../testEntry';
+export * from '../javascriptEatWorld';
+export * from '../teachingCode';
+export * from '../theWhy';

@@ -20,7 +20,7 @@ function Nav() {
                     ].map((button: { icon: string, card: RenderedCard }, key: number) => {
                         return <button
                             key={key}
-                            className={`fa ${button.icon} ${styles.iconStyle} ${activeCard === button.card && styles.iconStyleActive}`}
+                            className={`fa ${button.icon} ${styles.iconStyle} ${activeCard === button.card && 'iconStyleActive'}`}
                             onClick={() => setActiveCard(button.card)}
                         />
                     })

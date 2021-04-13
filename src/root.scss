@@ -14,12 +14,20 @@ body {
 
 .collapse {
   max-height: 0;
-  transition: max-height 0.5s;
+  transform: translateY(2rem);
+  transition: 0.5s;
 }
 
 .expand {
   max-height: 100em;
+  transform: translateY(0);
   transition: max-height 0.5s;
+}
+
+.iconStyleActive {
+  animation: glow 1s ease-in-out infinite alternate;
+  color: lime !important;
+  transition: color 0.5s;
 }
 
 /* Syntax Highlighter Styling */
@@ -32,6 +40,7 @@ $inc-active: url("./static/images/SyntaxParser/play-button-increment-active.png"
 
 code {
   animation: fadeIn 1s;
+  font-family: Consolas, monospace;
 }
 
 pre {

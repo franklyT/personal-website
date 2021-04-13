@@ -1,39 +1,68 @@
-import {ReactElement, useContext} from 'react';
+import {useContext} from 'react';
 import styles from './Carets.module.scss';
 import CardContext from "../Card.context";
+import RenderedCard from "../../../static/shared/Enums/RenderedCard";
 
 // TODO: Refactor this entire concept... it's too dependent on media queries.
 
 function Carets() {
-    return (<div></div>)
-    /* const { activeCard, code} = useContext(CardContext);
+    const {activeCard, code} = useContext(CardContext);
 
-     // Destructure refs
-     // const { portfolioRef, blogRef, codeRef, atRef, activeCard } = props.parentState;
+    return (
+        <div className={styles.containerRow}>
+            <i
+                className={`${styles.caretStyle} ${styles.caretStylePortfolio}`}
+                style={
+                    activeCard === RenderedCard.portfolio ?
+                        code ? {
+                            height: "0px",
+                            borderColor: 'transparent transparent rgb(47,47, 47) transparent'
+                        } : {height: "0px"} : {
+                            opacity: 0,
+                            height: "100px"
+                        }}
+            />
 
-     return (
-         <div className={styles.containerRow}>
-             {[
-             { elm: portfolioRef, style: styles.caretStylePortfolio },
-             { elm: blogRef, style: styles.caretStyleBlog },
-             { elm: codeRef, style: styles.caretStyleCode },
-             { elm: atRef, style: styles.caretStyleAt }
-             ].map((ref: { elm: ReactElement, style: string }, index) => {
-                 return <i
-                     key={index}
-                     className={`${styles.caretStyle} ${ref.style}`}
-                     style={
-                         activeCard === ref.elm ?
-                         code ? { height: "0px", borderColor: 'transparent transparent rgb(47,47, 47) transparent' } : { height: "0px" } : {
-                                 opacity: 0,
-                                 height: "100px"
-                             }}
-                 />
-             })
-             }
-         </div>
-     );
-     */
+            <i
+                className={`${styles.caretStyle} ${styles.caretStyleBlog}`}
+                style={
+                    activeCard === RenderedCard.blog ?
+                        code ? {
+                            height: "0px",
+                            borderColor: 'transparent transparent rgb(47,47, 47) transparent'
+                        } : {height: "0px"} : {
+                            opacity: 0,
+                            height: "100px"
+                        }}
+            />
+
+            <i
+                className={`${styles.caretStyle} ${styles.caretStyleCode}`}
+                style={
+                    activeCard === RenderedCard.code ?
+                        code ? {
+                            height: "0px",
+                            borderColor: 'transparent transparent rgb(47,47, 47) transparent'
+                        } : {height: "0px"} : {
+                            opacity: 0,
+                            height: "100px"
+                        }}
+            />
+
+            <i
+                className={`${styles.caretStyle} ${styles.caretStyleAt}`}
+                style={
+                    activeCard === RenderedCard.at ?
+                        code ? {
+                            height: "0px",
+                            borderColor: 'transparent transparent rgb(47,47, 47) transparent'
+                        } : {height: "0px"} : {
+                            opacity: 0,
+                            height: "100px"
+                        }}
+            />
+        </div>
+    );
 }
 
 export default Carets;

@@ -8,6 +8,7 @@
   padding: 3vh 1vw 2vh 1.2vw;
   top: 10vh;
   transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
-  width: fit-content;
+  width: 40vw !important;
   overflow: hidden;
+  margin-left: 6vw;
 }

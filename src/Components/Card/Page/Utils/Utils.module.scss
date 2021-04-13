@@ -1,16 +1,15 @@
 .iconStyle {
-  background: rgba(255, 255, 255, 0);
   border: none;
-  color: rgba(255, 255, 255, .4);
-  display: flex;
-  font-size: 3vw;
-  height: 7vh;
-  margin-right: 3vw;
-  margin-top: 2vh;
+  font-size: 2vw;
+  height: fit-content;
   outline: none;
+  width: fit-content;
+  z-index: 1000;
+  background: none;
+  float: right;
+  margin-top: -1rem;
   position: relative;
-  width: 5vw;
-  z-index: 1;
+  color: rgb(150, 150, 150);
 
   &:hover {
     color: lime;

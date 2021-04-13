@@ -1,3 +1,7 @@
+const CodeCode = {
+    codeJSX: `
+// Code.tsx
+
 import {useState, useEffect, useContext} from 'react';
 import CardContext from "../../Card.context";
 
@@ -25,10 +29,10 @@ function Code() {
             Technologies:
 
             <br/>
-            &nbsp;\ Languages: CSS, HTML, JavaScript, Python, Ruby, TypeScript <br/>
-            &nbsp;\ Frameworks: e.g. jQuery, React, Ruby on Rails, Svelte, Vue <br/>
-            &nbsp;\ Platforms/APIs: e.g. Firebase, Heroku, Docker, Google Platforms, Netlify <br/>
-            &nbsp;\ Build: e.g. Babel, Gulp, Webpack <br/>
+            &nbsp;\\ Languages: CSS, HTML, JavaScript, Python, Ruby, TypeScript <br/>
+            &nbsp;\\ Frameworks: e.g. jQuery, React, Ruby on Rails, Svelte, Vue <br/>
+            &nbsp;\\ Platforms/APIs: e.g. Firebase, Heroku, Docker, Google Platforms, Netlify <br/>
+            &nbsp;\\ Build: e.g. Babel, Gulp, Webpack <br/>
         </>
     );
 
@@ -50,7 +54,7 @@ function Code() {
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.gridImage
-                            : `${styles.gridImage} ${styles.gridImageInactive}`
+                            : \`\${styles.gridImage} \${styles.gridImageInactive}\`
                     }
                     alt="Github Links"
                     onClick={() => window.open("https://github.com/franklyT")}
@@ -60,7 +64,7 @@ function Code() {
                     className={
                         hoveredProject === "githubSplash"
                             ? styles.projectDetailsBox
-                            : `${styles.projectDetailsBox} ${styles.projectDetailsBoxInactive}`
+                            : \`$\{styles.projectDetailsBox} \${styles.projectDetailsBoxInactive}\`
                     }
                 >
                     <div className={styles.projectDetailsText}>
@@ -81,3 +85,86 @@ function Code() {
 }
 
 export default Code;
+
+    `,
+
+    codeSCSS: `
+// Code.module.scss
+.cardStyle {
+  bottom: 10vh;
+  width: 100%;
+  height: 100%;
+}
+
+.codeStyle {
+  background-color: rgb(47, 47, 47);
+  width: 50vw;
+}
+
+.container {
+  flex-basis: 100%;
+  position: relative;
+  transition: 1s;
+  width: 100%;
+
+}
+
+.grid {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gridImage {
+  cursor: pointer;
+  display: flex;
+  height: 45vh;
+  margin-left: -1.2vw;
+  transition: 1s;
+  width: 52.2vw;
+}
+
+.gridImageInactive {
+  filter: grayscale(50);
+  transition: 1s;
+}
+
+.title {
+  font-size: 3vw;
+  padding-bottom: 2vh;
+  padding-top: 0.4vh;
+  text-align: center;
+}
+
+.projectDetailsBox {
+  background-color: rgb(21, 21, 21);
+  color: lime;
+  height: 31vh;
+  line-height: 2vh;
+  margin-top: -.01vh; // Fixes flickering issue in Chrome
+  overflow: hidden;
+  transition: 1s;
+  width: 44vw;
+  margin-bottom: -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.projectDetailsBoxInactive {
+  height: 0;
+  transition: 1s;
+}
+
+.projectDetailsText {
+  font-size: .7vw;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+.linkGithub {
+  color: rgb(60, 170, 255);
+}
+    `
+}
+
+export default CodeCode;

@@ -1,11 +1,24 @@
 import {IPostData} from "./Interface/IPostData";
 
 export const tailwindCSS: IPostData = {
-    date: '00/00/20',
-    time: '00:00 AM',
-    title: 'Why You Should Use Tailwind.css (And Why I Don\'t Believe That)',
+    date: '10/22/20',
+    time: '10:32 AM',
+    title: 'The Devil\'s Advocate',
     markdown: `
-tailwindcss is a compelling utility-first framework that proposes a mich different value-proposition than the typical CSS framework, a contribution to the Sisyphean effort to assess and improve the fundamental problems with CSS in web development. Briefly, CSS has historically suffered from a combination of shortcomings that have prevented it from being used effectively to produce a scalable, mature view layer for web applications, the domain of which has inspired a hydra-esque approach to problem solving: you lop one head off, and two more grow to take its place.
+# THE DEVIL'S ADVOCATE
+
+I don't like Tailwind.css. That's right, I said it. From embracing the foibles of vanilla js (soon to expand to React and Vue, so I understand), to the general lack of a problem-domain that I am comfortable explaining beyond "you have to use it to get it", 
+I don't see a huge value proposition in the technology. In fact, my experience with unwieldy vanilla html files laden with complex markup have put me off to the framework in nearly every instance I can think to use it.
+
+As such, I'm going to write a brief post explaining why you should use it. After all, the greatest value to be gained, in my opinion, is humility as a developer, an understanding and encompassing perspective that eschews dogma in favor of exploration.
+
+Tailwind.css is a compelling utility-first framework that proposes a mich different value-proposition than the typical CSS framework, a contribution to the Sisyphean effort to assess and improve the fundamental problems with CSS in web development. I'll assume you
+know at least a little about the problem-domain, so I won't wax too poetic about it, beyond to note the hydra-esque approach developers have taken to solving it: you lop one head off of a CSS framework, and three more grow to take its place.
+
+Tailwind sits somewhere between all-in-one solutions like the popular Bootstrap, and raw component composition using SCSS/CSS-in-js, and other modular solutions to styling. It pushes the logic for component composition directly to the markup you are styling,
+allowing rapid iteration, a contextual monolith (no swapping between files), and accessible, pre-defined utility classes, such as consistent margins and padding.
+
+Take for example the following component from the Tailwind documentation:
 
 ~~~
 <ul class="space-y-4">
@@ -14,14 +27,14 @@ tailwindcss is a compelling utility-first framework that proposes a mich differe
   </li>
 </ul>
 ~~~
-In a way, standards for engineering re: CSS can be viewed as a linear evolution: from things like BEM (to shun the cascade and invent scope), to SCSS (to bring CSS towards a more imperative model), to CSS-in-js, which literally brings the flexibility and power of JS into play (/the fray).
 
-Most CSS frameworks solve this problem in a different way: by pre-defining styles with various levels of opinionation, moving developers further away from the "metal" of CSS, and the problems that are implicit therein. In fact, I think it would be fairly trivial to argue that the popularity of Bootstrap shows the success of this approach: creating a fairly unitary, modular stylesheet from which a developer, perhaps less or more familiar with the nuances of raw CSS, can be productive.
+The Bootstrap approach here would represent the Bootstrap problem: what if you are not satisfied with the robust defaults that they provide? Is it trivial to shim a style in place, or is there a component idiomatic Bootstrap would prefer you use?
 
-Tailwindcss, to me, represents a way of bringing developers back into the fold of raw CSS manipulation, *while still giving them the raw power of pre-defined utility classes*. It is a happy medium between the two approaches, granting the front-end developer power, but with less of a cost of customzation, which can be palpably sensed in the sea of Bootstrap-inspired web pages.
+Moreover, perhaps some degree of modularity is your taste, wherein you'd have at the very least separate markup, either in a CSS file or in-place further down the file tree. What do you name these classes? Do the classes correlate to the markup, or do the classes
+feel "tacked on"? Is it trivial to refer to defaults, or do you need to create a robust mini-framework of utility classes?
 
-Indeed, tailwindcss users often cite the speed of development they are able to enjoy with the bevy of utility classes provided, combined with the power of predefined rules that keep them from the usual CSS design foot-guns (uneven margins, inconsistent colors, complex semantics, etc.).
+Both approaches have unique problems. Tailwind.css attempts to sit between both, which it does so remarkably adroitly.
 
-Typically, when a problem-space is identified and a solution proposed, it is fairly easy to make the case for your solution. After all, if your solution is effective, its advocates will develop naturally and proportionally to the pain it eases. Indeed, by this metric, it would seem that Tailwind has done the world a great favor, and will continue to do so as it matures. However, most adovcates for Tailwind eschew this common metric of performance, and adopt a more organic form of proseltyization: you have to try it to know how nice it is. Perhaps this could be a valid metric indeed, but it does adopt a very non-traditional stance in a market of "This is X. X solves Y problem. Here you go!" solutions.
-`
-}
+Perhaps the best explanation is the one I've seen countless developers use, "you have to try it to get it". Indeed, I don't see how this is inherently an invalid statement, as sometimes, the solution is not a mind-opening paradigm shift (like OOP, or, more recently, in my opinion, graphQL), but
+doing a bunch of little things right.
+`}

@@ -24,7 +24,8 @@ export function Post(props: { propObj: { post: IPostData } }) {
                     &gt;
                 </span>
             </div>
-            <ReactMarkdown children={post.markdown} className={showPost ? "expand" : "collapse"}/>
+
+                <ReactMarkdown children={post.markdown} className={`${styles.markdown} ${showPost ? "expand" : "collapse"}`}/>
         </div>
     )
 }

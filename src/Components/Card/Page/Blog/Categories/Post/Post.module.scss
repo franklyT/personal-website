@@ -31,3 +31,21 @@
 .rotated {
   transform: rotate(90deg);
 }
+
+.markdown {
+  background-color: rgb(30, 30, 30);
+  line-height: 1.75rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  font-family: Verdana;
+  font-size: 1.2rem;
+  color: lime;
+
+  h1 {
+    font-family: "Press Start 2P", cursive;
+    line-height: 4rem;
+    font-size: 1rem;
+  }
+}

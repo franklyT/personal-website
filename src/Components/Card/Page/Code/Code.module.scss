@@ -1,26 +1,20 @@
 .cardStyle {
-  background-color: white;
   bottom: 10vh;
-  display: flex;
-  flex-basis: fit-content;
-  flex-wrap: wrap;
-  min-height: 30vh;
-  padding: 3vh 1vw 2vh 1.2vw;
-  top: 10vh;
-  transition: width 0.3s ease-out; // note that we're transitioning transform, not height!
-  width: 50vw;
+  width: 100%;
+  height: 100%;
 }
 
 .codeStyle {
-
+  background-color: rgb(47, 47, 47);
+  width: 50vw;
 }
 
 .container {
   flex-basis: 100%;
-  margin-right: -10vw;
-  padding-right: 10vw;
   position: relative;
   transition: 1s;
+  width: 100%;
+
 }
 
 .grid {
@@ -56,11 +50,12 @@
   color: lime;
   height: 31vh;
   line-height: 2vh;
-  margin-left: -1.2vw;
   margin-top: -.01vh; // Fixes flickering issue in Chrome
   overflow: hidden;
   transition: 1s;
-  width: 52.2vw;
+  width: 45vw;
+  margin-bottom: -2rem;
+  margin-right: -4vw;
 }
 
 .projectDetailsBoxInactive {
@@ -69,7 +64,7 @@
 }
 
 .projectDetailsText {
-  font-size: .7vw;
+  font-size: 0.8rem;
   padding: 1vh 1vw 1vh 1vw;
 }
 

@@ -4,6 +4,8 @@
   padding-right: 10vw;
   position: relative;
   transition: 1s;
+  width: 100%;
+  height: 100%;
 }
 
 .codeStyle {
@@ -30,8 +32,12 @@
 
 .meContainer {
   font-size: .8vw;
-  margin-top: 12vh;
-  position: absolute;
+  margin-bottom: 2em;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  width: fit-content;
 }
 
 .meNameStyle {
@@ -40,7 +46,6 @@
 
 .meNameCaret {
   animation: blink 1.3s linear infinite;
-  display: inline-flex;
   height: 4vh;
   margin-left: 0.4vw;
   margin-top: -0.2vh;
@@ -63,4 +68,12 @@
   font-weight: 300;
   margin-top: -3vh;
   padding-top: 2vh;
+}
+
+.gotchas {
+  margin-left: auto;
+  margin-right: auto;
+  width: 57%;
+  height: fit-content;
+  font-size: 1.5rem;
 }

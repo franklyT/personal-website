@@ -2,7 +2,6 @@ import {useState} from 'react';
 import {CardContextProvider} from './Card.context';
 
 import Nav from "./Nav/Nav";
-import Utils from "./Utils/Utils";
 
 import styles from './Card.module.scss';
 
@@ -23,8 +22,6 @@ function Card() {
             <div className={`${styles.baseCardStyle} ${extendedCardStyle}`}>
                 <Page/>
             </div>
-
-            <Utils/>
         </CardContextProvider>
     );
 }

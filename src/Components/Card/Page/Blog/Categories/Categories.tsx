@@ -15,7 +15,7 @@ export function Categories() {
         <>
             {Object.keys(pagesByYear).reverse().map((year, yearIndex: number) => {
                     return (
-                        <section key={yearIndex} style={{marginBottom: "1rem"}}>
+                        <section key={yearIndex} style={{marginBottom: "1rem", marginTop: "2rem"}}>
                             <span> {year} </span>
 
                             <hr style={{borderTop: '4px solid lime'}}/>

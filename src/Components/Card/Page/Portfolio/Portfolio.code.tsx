@@ -1,7 +1,7 @@
 const PortfolioCode = {
 portfolioJSX:
 /*jsx*/`
-// Portfolio.code.tsx
+// Portfolio.tsx
 
 import {useContext, useEffect} from 'react';
 import CardContext from "../../Card.context";
@@ -10,17 +10,28 @@ import SyntaxParser from '../../../../static/shared/Components/SyntaxParser/Synt
 import PortfolioCode from './Portfolio.code';
 
 import styles from './Portfolio.module.scss';
+import Utils from "../Utils/Utils";
 
 function Portfolio() {
-    const {code, cardStyle, setCardStyle} = useContext(CardContext);
+    const {code, extendedCardStyle, setExtendedCardStyle} = useContext(CardContext);
 
     useEffect(() => {
-        code ? setCardStyle(styles.codeStyle) : setCardStyle(styles.cardStyle);
-    }, [code, cardStyle, setCardStyle]);
+        code ? setExtendedCardStyle(styles.codeStyle) : setExtendedCardStyle(styles.cardStyle);
+    }, [code, extendedCardStyle, setExtendedCardStyle]);
+
+    const JAVASCRIPT_GOTCHAS = [
+        '"b" + "a" + +"a" + "a"; // -> \\'baNaNa\\'',
+        '[] == ![]; // -> true',
+        'NaN === NaN; // -> false',
+        '![] + []; // -> \\'false\\'',
+        '[] == true // -> false',
+        '!!null; // -> false',
+        '[1, 2, 3] + [4, 5, 6]; // -> \\'1,2,34,5,6\\''
+    ]
 
     function getCard() {
         return (
-            <div className={styles.container}>
+            <>
                 <div className={styles.meContainer}>
                     <h1 className={styles.meNameStyle}>
                         Francis Traina <span className={styles.meNameCaret}/>
@@ -30,16 +41,22 @@ function Portfolio() {
                         Web Developer
                     </h2>
                 </div>
-            </div>
+
+                <div className={styles.gotchas}>
+                    <code>
+                        {JAVASCRIPT_GOTCHAS[Math.floor(Math.random() * JAVASCRIPT_GOTCHAS.length)]}
+                    </code>
+                </div>
+            </>
         );
     }
 
     function getCode() {
         return (
-            <div className={styles.container}>
+            <>
                 <SyntaxParser language={"jsx"} code={PortfolioCode.portfolioJSX}/>
                 <SyntaxParser language={"scss"} code={PortfolioCode.portfolioSCSS}/>
-            </div>
+            </>
         );
     }
 
@@ -48,142 +65,98 @@ function Portfolio() {
     }
 
     return (
-        <>
+        <div className={styles.container}>
+            <Utils />
+
             {getCardOrCode()}
-        </>
+        </div>
     )
 }
 
 export default Portfolio;
-
-`,
-
-portfolioJEST: 
-/*js*/`
 `,
 
 portfolioSCSS:
 /*css*/`
 // Portfolio.module.scss
 
-@import '../../../../../../SCSS/animations';
-
-.masterDiv {
-    flex-basis: 100%;
-    min-width: 30vw;
-    transition: 0s;
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-
-    padding-right: 10vw;
-    margin-right: -10vw;
+.container {
+  flex-basis: 100%;
+  margin-right: -10vw;
+  padding-right: 10vw;
+  position: relative;
+  transition: 1s;
 }
 
-.masterDivVisible {
-    transition: 1s;
-    opacity: 1;
-    position: relative;
-    pointer-events: auto;
+.codeStyle {
+  background-color: rgb(47, 47, 47);
+  width: 50vw;
 }
 
-.portrait {
-    position: absolute;
-    height: 12em;
-    width: auto;
+.cardStyle {
+  animation: test 0.3s, fadeIn 1s;
+  width: 30vw;
 
-    top: 5.4vh;
-    right: -24vw;
-
-    z-index: 100;
-}
-
-.oneAndOnlyDiv {
-    // I like ths
-    transform: scaleY(0.8);
-
-    position: absolute;
-    height: 29.6vh;
-    width: 21.5vw;
-    color: lime;
-    padding: 2em 2em 2em 2em;
-    border: 6px solid lime;
-    border-radius: 1em;
-
-    right: -17vw;
-    top: -3vh;
-    background: #151515;
-    z-index: 101;
-
-    &:before {
-        content: "";
-        position: absolute;
-
-        right: -2.8em;
-        bottom: 50%;
-
-        border-left: 20px solid lime;
-        border-right: 20px solid transparent;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
+  @keyframes test {
+    0% {
+      max-height: 0 !important;
+      min-height: 10vh;
     }
 
-    &:after {
-        content: "";
-        position: absolute;
-
-        right: -2.2em;
-        bottom: 50%;
-
-        border-left: 20px solid black;
-        border-right: 20px solid transparent;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
+    100% {
+      max-height: 100vh;
+      min-height: 30vh;
     }
+  }
 }
 
 .meContainer {
-    position: absolute;
-    margin-top: 12vh;
-
-    font-size: .8vw;
-
+  font-size: .8vw;
+  margin-bottom: 2em;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  width: fit-content;
 }
 
 .meNameStyle {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .meNameCaret {
-    position: absolute;
-    display: inline-flex;
-    margin-left: 0.4vw;
-    margin-top: -0.2vh;
-    height: 4vh;
-    width: 0.3vw;
+  animation: blink 1.3s linear infinite;
+  height: 4vh;
+  margin-left: 0.4vw;
+  margin-top: -0.2vh;
+  position: absolute;
+  width: 0.3vw;
 
-    animation: blink 1.3s linear infinite;
-
-    @keyframes blink {
-        from, to {
-            background-color: transparent;
-          }
-          50% {
-            background-color: lime;
-          }
-        }
+  @keyframes blink {
+    from, to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: lime;
+    }
+  }
 }
 
 .meTitleStyle {
-    margin-top: -3vh;
-    color: lime;
-    font-weight: 300;
-
-    font-size: 1vw;
-
-    padding-top: 2vh;
+  color: lime;
+  font-size: 1vw;
+  font-weight: 300;
+  margin-top: -3vh;
+  padding-top: 2vh;
 }
-`
+
+.gotchas {
+  margin-left: auto;
+  margin-right: auto;
+  width: 57%;
+  height: fit-content;
+  font-size: 1.5rem;
+}`
 }
 
 export default PortfolioCode;

@@ -1,3 +1,7 @@
+const AtCode = {
+    atJSX: `
+// At.tsx
+
 import {useContext, useEffect, useState} from 'react';
 import CardContext from "../../Card.context";
 
@@ -6,7 +10,6 @@ import SyntaxParser from "../../../../static/shared/Components/SyntaxParser/Synt
 import BlogCode from "../Blog/Blog.code";
 import Categories from "../Blog/Categories/Categories";
 import AtCode from "./At.code";
-import Utils from "../Utils/Utils";
 
 function At() {
     const {extendedCardStyle, setExtendedCardStyle, code, setCode} = useContext(CardContext);
@@ -67,7 +70,7 @@ function At() {
                         name="entry.2005620554"
                         type="text"
                         placeholder="Name"
-                        className={`${styles.input} ${styles.inputBox} ${styles.inputBoxName}`}
+                        className={\`\${styles.input} \${styles.inputBox} \${styles.inputBoxName}\`}
                         required
                     />
 
@@ -78,7 +81,7 @@ function At() {
                         name="entry.1045781291"
                         type="text"
                         placeholder="Email"
-                        className={`${styles.input} ${styles.inputBox} ${styles.inputBoxEmail}`}
+                        className={\`\${styles.input} \${styles.inputBox} \${styles.inputBoxEmail}\`}
                         required
                     />
 
@@ -88,7 +91,7 @@ function At() {
                         name="entry.50456214"
                         type="text"
                         placeholder="Subject"
-                        className={`${styles.input} ${styles.inputBox} ${styles.inputBoxSubject}`}
+                        className={\`\${styles.input} \${styles.inputBox} \${styles.inputBoxSubject}\`}
                         required
                     />
 
@@ -97,7 +100,7 @@ function At() {
                     <textarea
                         name="entry.839337160"
                         placeholder="Message"
-                        className={`${styles.input} ${styles.textarea}`}
+                        className={\`\${styles.input} \${styles.textarea}\`}
                         required
                     />
 
@@ -110,7 +113,7 @@ function At() {
                         name="verify"
                         type="text"
                         placeholder="Verify"
-                        className={`${styles.input} ${styles.inputBox} ${styles.inputBoxVerify}`}
+                        className={\`\${styles.input} \${styles.inputBox} \${styles.inputBoxVerify}\`}
                         onChange={evt => setVerifyInput(Number(evt.target.value))}
                         required
                     />
@@ -135,3 +138,116 @@ function At() {
 }
 
 export default At;
+    `,
+
+    atSCSS: `
+// At.module.scss
+    
+.cardStyle {
+  width: 42vw;
+}
+
+.codeStyle {
+  background-color: rgb(47, 47, 47);
+  width: 50vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.title {
+  font-size: 2.5vw;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: rgb(98, 98, 98);
+  font-size: 1.1vw;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.input {
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.inputBox {
+  background: rgba(240, 240, 240, 1);
+  border: none;
+  display: inline-flex;
+  height: 4vh;
+  margin-top: 3vh;
+  padding-left: .7vw;
+  width: 18vw;
+}
+
+.inputBoxName {
+  margin-right: 1vw;
+}
+
+.inputBoxEmail {
+  margin: 0;
+  width: 18vw;
+}
+
+.inputBoxSubject {
+  width: 36vw;
+}
+
+.inputBoxVerify {
+  margin-bottom: 1.5em;
+  margin-top: -1.5em;
+  width: 10em;
+}
+
+.textarea {
+  background: rgba(240, 240, 240, 1);
+  border: none;
+  display: inline-flex;
+  height: 20vh;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  padding-left: .7vw;
+  padding-top: 1.5vh;
+  resize: none;
+  width: 36vw; // Double width + margin-right
+}
+
+.mrRoboto {
+  font-size: 1.3em;
+}
+
+.submit {
+  background-color: rgb(21, 21, 21);
+  border: none;
+  color: white;
+  font-size: 2vh;
+  height: auto;
+  padding: 0.7vh 0.3vw 0.7vh 0.5vw;
+  width: fit-content;
+
+  &:active {
+    background: rgba(50, 50, 50, 1);
+  }
+
+  &:focus {
+    outline: 0
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, .8);
+    cursor: pointer;
+  }
+}
+
+.linkGithub {
+  color: rgb(60, 170, 255);
+}`
+}
+
+export default AtCode;
