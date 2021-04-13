@@ -20,7 +20,7 @@ export function Categories() {
 
                             <hr style={{borderTop: '4px solid lime'}}/>
 
-                            {pagesByYear[year].reverse().map((post: IPostData, pageIndex: number) => {
+                            {pagesByYear[year].map((post: IPostData, pageIndex: number) => {
                                 return <Post key={pageIndex} propObj={{post}}/>
                             })}
                         </section>
