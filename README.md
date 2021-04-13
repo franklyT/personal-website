@@ -1,3 +1,3 @@
 # personal-website
 
-Personal Website in React + TypeScript + SCSS.
+Personal Website in React << TypeScript << SCSS.
