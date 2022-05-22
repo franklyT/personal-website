@@ -1,7 +1,7 @@
 import {useState, useEffect, useContext} from 'react';
 import CardContext from "../../Card.context";
 
-import githubSplashIcon from "../../../../static/images/Card/githubSplash.jpg";
+import githubSplashIcon from "../../../../static/Images/Card/githubSplash.jpg";
 
 import styles from "./Code.module.scss";
 import Utils from "../Utils/Utils";
